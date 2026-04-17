@@ -1,0 +1,41 @@
+:root {
+  --disabled-text: #94a3b8;
+  --active-text: #f1f5f9;
+  --primary-gradient: linear-gradient(
+    90deg,
+    rgba(124, 58, 237, 1) 0%,
+    rgba(79, 70, 229, 1) 100%
+  );
+  --secondary-gradient: linear-gradient(
+    90deg,
+    rgba(34, 211, 238, 1) 0%,
+    rgba(167, 139, 250, 1) 100%
+  );
+  --text-color: #ffffff;
+  --transparent-black: #07090f;
+  --body-bg: #080a10;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background: var(--body-bg);
+  font-family: "Cairo", sans-serif !important;
+}
+
+nav-link {
+  color: var(--disabled-text);
+  text-decoration: none;
+  font-size: 1.2em;
+}
+
+.collapse .navbar-collapse {
+}

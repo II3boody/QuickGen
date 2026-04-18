@@ -1,47 +1,13 @@
-:root {
-  --disabled-text: #94a3b8;
-  --active-text: #f1f5f9;
-  --primary-gradient: linear-gradient(
-    90deg,
-    rgba(124, 58, 237, 1) 0%,
-    rgba(79, 70, 229, 1) 100%
-  );
-  --secondary-gradient: linear-gradient(
-    90deg,
-    rgba(167, 139, 250, 1) 0%,
-    rgba(34, 211, 238, 1) 100%
-  );
-  --text-color: #ffffff;
-  --transparent-black: hsl(225, 36%, 4%, 0.8);
-  --body-bg: #080a10;
-  --hover-bg-color: rgb(241, 245, 249, 0.12);
-}
-
 body {
   font-family: "Cairo", sans-serif !important;
   background: #080a10;
-}
-
-.hero-section {
-  text-align: center;
-  padding: 20px;
-  text-align: center;
-  margin-bottom: 40PX;
-}
-
-.hero-title {
-  font-size: 48px;
-  font-weight: 800;
-  margin-bottom: 20px;
-  line-height: 1.4;
-  direction: rtl;
 }
 
 .text-white {
   color: #ffffff;
 }
 
-.text-blue {
+.primary-text {
   background: var(--secondary-gradient);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
@@ -53,7 +19,7 @@ body {
   font-weight: 400;
   color: #94a3b8;
   line-height: 1.7;
- justify-self: center;
+  justify-self: center;
 }
 
 .path-card {
@@ -80,7 +46,7 @@ body {
   border-radius: 20px;
   font-size: 14px;
 }
-.icon {
+.path-card .icon {
   background: #1e1b4b;
   color: #a78bfa;
   padding: 6px 14px;
@@ -100,7 +66,7 @@ body {
   font-size: 13px;
   margin-left: 6px;
 }
-.start-btn {
+.path-card .start-btn {
   background: linear-gradient(90deg, #7c3aed, #4f46e5);
   border: none;
   padding: 12px;
@@ -111,7 +77,7 @@ body {
   transition: 0.3s;
 }
 
-.start-btn:hover {
+.path-card .start-btn:hover {
   opacity: 0.9;
 }
 .cta-section {
@@ -128,22 +94,22 @@ body {
   text-align: center;
   background: linear-gradient(180deg, #14161f 0%, #0d0f14 100%);
 }
-.title {
+.cta-section .title {
   font-size: 38px;
   font-weight: 700;
   margin-bottom: 14px;
   color: #ffffff;
 }
-.sub-title {
+.cta-section .sub-title {
   font-size: 16px;
   color: #8b8d96;
   font-weight: 400;
   margin-bottom: 30px;
 }
-.highlight {
+.cta-section .highlight {
   color: #3b82f6;
 }
-.btn-primary {
+.cta-section .btn-primary {
   display: inline-block;
   background: linear-gradient(90deg, #7c3aed, #4f46e5);
   font-weight: 700;
@@ -153,7 +119,7 @@ body {
   border-radius: 12px;
   color: #ffffff;
 }
-.btn-primary:hover {
+.cta-section .btn-primary:hover {
   background-color: #5e32d6;
   transform: translateY(-2px);
   box-shadow: 0 4px 12px rgba(114, 65, 255, 0.3);

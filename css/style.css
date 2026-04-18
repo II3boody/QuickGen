@@ -111,7 +111,6 @@ nav .container {
 .btn.login:hover {
   background-image:
     linear-gradient(var(--body-bg), var(--body-bg)),
-    /* لون الخلفية الداخلي */
     var(--primary-gradient);
   background-origin: border-box;
   background-clip: padding-box, border-box;

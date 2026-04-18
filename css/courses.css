@@ -1,0 +1,168 @@
+:root {
+    --disabled-text: #94a3b8;
+    --active-text: #f1f5f9;
+    --primary-gradient: linear-gradient(90deg,
+            rgba(124, 58, 237, 1) 0%,
+            rgba(79, 70, 229, 1) 100%);
+    --secondary-gradient: linear-gradient(90deg,
+            rgba(167, 139, 250, 1) 0%,
+            rgba(34, 211, 238, 1) 100%);
+    --text-color: #ffffff;
+    --transparent-black: hsl(225, 36%, 4%, 0.8);
+    --body-bg: #080a10;
+    --hover-bg-color: rgb(241, 245, 249, 0.12);
+}
+
+* {
+    box-sizing: border-box;
+}
+
+/* تنسيق الحاوية */
+body {
+    font-family: "Cairo", sans-serif !important;
+    background: #080a10;
+}
+
+.hero-section {
+    text-align: center;
+    padding: 20px;
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.hero-title {
+    font-size: 48px;
+    font-weight: 800;
+    margin-bottom: 20px;
+    line-height: 1.4;
+    direction: rtl;
+}
+
+.text-white {
+    color: #ffffff;
+}
+
+.text-blue {
+    background: var(--secondary-gradient);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+.hero-subtitle {
+    font-size: 1.25rem;
+    font-weight: 400;
+    color: #94a3b8;
+    line-height: 1.7;
+    justify-self: center;
+}
+
+.liset ul li:first-child {
+    color: blue;
+}
+
+.liset ul {
+    background-color: #0b0e14;
+    padding: 20px;
+    display: flex;
+    gap: 15px;
+}
+
+/* تنسيق الزر في الحالة العادية */
+.nav-btn {
+    text-decoration: none;
+    display: inline-block;
+    padding: 10px 25px;
+    border-radius: 12px;
+    background-color: #1e2632;
+    /* اللون الرمادي للأزرار */
+    color: #a0a5ad;
+    /* لون النص */
+    font-size: 16px;
+    transition: all 0.3s ease;
+    /* عشان الحركة تكون ناعمة */
+}
+
+/* التنسيق عند مرور الماوس (الهوفر) */
+.nav-btn:hover {
+    background-color: #a855f7;
+    /* اللون البنفسجي */
+    color: #ffffff !important;
+    /* النص يتحول للأبيض */
+    transform: translateY(-2px);
+    /* حركة اختيارية بسيطة لفوق */
+    box-shadow: 0 5px 15px rgba(168, 85, 247, 0.3);
+    /* توهج بنفسجي */
+}
+
+/* إذا أردت أن يبقى الزر "المختار حالياً" بنفسجي أيضاً */
+.nav-btn:active,
+.nav-btn.active {
+    background-color: #a855f7;
+    color: white;
+}
+
+/* الحاوية الرئيسية للكرت */
+:root {
+    --primary-bg: #0b1120;
+    --card-bg: rgba(255, 255, 255, 0.05);
+    --neon-blue: #00d2ff;
+    --neon-pink: #ff00c1;
+    --text-white: #ffffff;
+}
+
+body {
+    background-color: var(--primary-bg);
+    direction: rtl;
+    /* للغة العربية */
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.card-titel {
+    font-weight: 700;
+    font-size: 20px;
+}
+
+.card-text {
+    font-weight: 400;
+    font-size: 20px;
+    color: #99a1af;
+}
+
+#cards .row {
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 20px;
+}
+
+#cards .row .card {
+    width: auto !important;
+    padding: 0;
+    background-color: unset;
+}
+
+#cards .row .card .card-body {
+    background-color: hsla(216, 31%, 17%, 0.5);
+    border-radius: 0px 0px 8px 8px;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    align-content: center;
+    justify-content: space-between;
+}
+
+#cards .row .card .info {
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding: 5px 10px;
+    border-bottom: 1px solid var(--disabled-text);
+}
+
+#cards .row .card .info div {
+    flex-basis: 45%;
+}
+
+#cards .row .card .info span {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}

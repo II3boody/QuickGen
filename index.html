@@ -1,48 +1,71 @@
 <!DOCTYPE html>
 <html lang="ar" dir="rtl">
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>QuickGen</title>
 
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Cairo:wght@200..1000&display=swap" rel="stylesheet">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>QuickGen</title>
 
-<link rel="stylesheet" href="./node_modules/@fortawesome/fontawesome-free/css/all.min.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@200..1000&display=swap" rel="stylesheet">
 
-<link rel="stylesheet" href="./node_modules/bootstrap/dist/css/bootstrap.rtl.min.css">
+  <link rel="stylesheet" href="./node_modules/@fortawesome/fontawesome-free/css/all.min.css">
 
-<link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="./node_modules/bootstrap/dist/css/bootstrap.rtl.min.css">
+
+  <link rel="stylesheet" href="css/style.css">
 </head>
 
 <body>
+  <div id="loading" class="align-items-center justify-content-center">
+    <div class="spinner">
+      <div class="double-bounce1"></div>
+      <div class="double-bounce2"></div>
+    </div>
+  </div>
+
+  <!-- Navbar -->
   <nav class="navbar">
     <div class="container">
+
+      <!-- Logo -->
       <div class="nav-logo">
         <img src="assets/imgs/div.logo-icon.svg" alt="Logo" class="logo-icon">
         <span class="logo-text">Quick Gen</span>
       </div>
 
+      <!-- Links -->
       <ul class="nav-links" id="navLinks">
-        <li><a href="#">الرئيسية</a></li>
-        <li><a href="#" class="active">المسارات</a></li>
+        <li><a href="#home" class="active">الرئيسية</a></li>
+        <li><a href="#">المسارات</a></li>
         <li><a href="#">الكورسات</a></li>
         <li><a href="#">توليد برومبت</a></li>
         <li><a href="#">الشهادات</a></li>
-        <li><a href="#">المجتمع</a></li>
         <li><a href="#">تواصل معنا</a></li>
+
+        <!-- Mobile Actions -->
+        <li class="mobile-only">
+          <div class="nav-actions">
+            <a href="#" class="btn login">تسجيل الدخول</a>
+            <a href="#" class="btn start">ابدأ التعلم</a>
+          </div>
+        </li>
       </ul>
 
-      <div class="nav-actions">
+      <!-- Desktop Actions -->
+      <div class="nav-actions desktop-only">
         <a href="#" class="btn login">تسجيل الدخول</a>
         <a href="#" class="btn start">ابدأ التعلم</a>
       </div>
 
+      <!-- Mobile Toggle -->
       <div class="mobile-island-toggle" onclick="toggleMenu()">
         <div class="bar"></div>
         <div class="bar"></div>
         <div class="bar"></div>
       </div>
+
     </div>
   </nav>
   <section id="home">
@@ -50,20 +73,21 @@
 
     </div>
   </section>
+  <section></section>
 
   <footer class="footer-wrap">
     <div class="footer-top">
 
       <div class="footer-col brand-col">
         <div class="brand-logo">
-          <span>Quick Gen</span>
           <div class="logo-icon">
             <img src="assets/imgs/div.logo-icon.svg" alt="Logo" class="logo-icon">
           </div>
+          <span>Quick Gen</span>
         </div>
         <p class="brand-desc">منصة تعليمية متخصصة في تعليم الذكاء الاصطناعي بشكل عملي لكل المستويات</p>
         <div class="social-icons">
-          <!-- Twitter/X -->
+          <!-- Twitter -->
           <div class="social-btn">
             <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
               <path

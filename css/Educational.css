@@ -17,11 +17,16 @@
   --hover-bg-color: rgb(241, 245, 249, 0.12);
 }
 
+body {
+  font-family: "Cairo", sans-serif !important;
+  background: #080a10;
+}
+
 .hero-section {
   text-align: center;
-  max-width: 750px;
   padding: 20px;
   text-align: center;
+  margin-bottom: 40PX;
 }
 
 .hero-title {
@@ -48,6 +53,7 @@
   font-weight: 400;
   color: #94a3b8;
   line-height: 1.7;
+ justify-self: center;
 }
 
 .path-card {
@@ -65,8 +71,9 @@
   border-color: #3b82f6;
 }
 
-/* badge */
 .custom-badge {
+  height: 60;
+  width: 28;
   background: #1e1b4b;
   color: #a78bfa;
   padding: 6px 14px;
@@ -79,13 +86,13 @@
   padding: 6px 14px;
   border-radius: 20px;
   font-size: 14px;
-  width: 45px;
-  height: 45px;
+  width: 54px;
+  height: 54px;
   border-radius: 12px;
   padding: 0;
   font-size: 20px;
 }
-/* small info badges */
+
 .info-badge {
   background: #1f2937;
   padding: 6px 12px;
@@ -106,4 +113,48 @@
 
 .start-btn:hover {
   opacity: 0.9;
+}
+.cta-section {
+  width: 100%;
+  padding: 40px 20px;
+  text-align: center;
+
+  /* background  */
+}
+.cta-section {
+  margin-top: 15px;
+  width: 100%;
+  padding: 40px 20px;
+  text-align: center;
+  background: linear-gradient(180deg, #14161f 0%, #0d0f14 100%);
+}
+.title {
+  font-size: 38px;
+  font-weight: 700;
+  margin-bottom: 14px;
+  color: #ffffff;
+}
+.sub-title {
+  font-size: 16px;
+  color: #8b8d96;
+  font-weight: 400;
+  margin-bottom: 30px;
+}
+.highlight {
+  color: #3b82f6;
+}
+.btn-primary {
+  display: inline-block;
+  background: linear-gradient(90deg, #7c3aed, #4f46e5);
+  font-weight: 700;
+  text-decoration: none;
+  font-size: 17px;
+  padding: 12px 32px;
+  border-radius: 12px;
+  color: #ffffff;
+}
+.btn-primary:hover {
+  background-color: #5e32d6;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(114, 65, 255, 0.3);
 }

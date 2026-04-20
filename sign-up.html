@@ -1,319 +1,315 @@
 <!DOCTYPE html>
-<<<<<<< HEAD
 <html lang="ar" dir="rtl">
-=======
+
 <html>
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>QuickGen</title>
->>>>>>> 1d1a1b7c4da61612b8e28c60a815d78f87e2a75d
-
-<head>
   <meta charset="UTF-8">
-  <title>إنشاء حساب</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>QuickGen</title>
 
-  <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;600&display=swap" rel="stylesheet">
-  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet">
+</head>
+<meta charset="UTF-8">
+<title>إنشاء حساب</title>
 
-  <link rel="stylesheet" href="style.css">
+<link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;600&display=swap" rel="stylesheet">
+<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet">
 
-  <style>
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-      font-family: "Cairo", sans-serif;
-    }
+<link rel="stylesheet" href="style.css">
 
-    body {
-      height: 100vh;
-      background: radial-gradient(circle at top, #1b1f3b, #0b0d1a);
-      position: relative;
-      color: white;
-    }
+<style>
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Cairo", sans-serif;
+  }
+
+  body {
+    height: 100vh;
+    background: radial-gradient(circle at top, #1b1f3b, #0b0d1a);
+    position: relative;
+    color: white;
+  }
 
 
-    .wrapper {
-      width: 1100px;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-    }
+  .wrapper {
+    width: 1100px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
 
-    /* الكارت */
-    .card {
-      width: 420px;
-      padding: 30px;
-      border-radius: 14px;
-      background: rgba(255, 255, 255, 0.05);
-      backdrop-filter: blur(12px);
-      border: 1px solid rgba(255, 255, 255, 0.1);
-    }
+  /* الكارت */
+  .card {
+    width: 420px;
+    padding: 30px;
+    border-radius: 14px;
+    background: rgba(255, 255, 255, 0.05);
+    backdrop-filter: blur(12px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+  }
 
-    .card h2 {
-      text-align: center;
-      margin-bottom: 8px;
-    }
+  .card h2 {
+    text-align: center;
+    margin-bottom: 8px;
+  }
 
-    .sub {
-      text-align: center;
-      font-size: 13px;
-      color: #aaa;
-      margin-bottom: 20px;
-    }
+  .sub {
+    text-align: center;
+    font-size: 13px;
+    color: #aaa;
+    margin-bottom: 20px;
+  }
 
-    /* أزرار */
-    .btn {
-      width: 100%;
-      padding: 10px;
-      margin-bottom: 10px;
-      border-radius: 8px;
-      border: none;
-      cursor: pointer;
-    }
+  /* أزرار */
+  .btn {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border-radius: 8px;
+    border: none;
+    cursor: pointer;
+  }
 
-    .google {
-      background: white;
-      color: black;
-    }
+  .google {
+    background: white;
+    color: black;
+  }
 
-    .github {
-      background: #2d2f3f;
-      color: white;
-    }
+  .github {
+    background: #2d2f3f;
+    color: white;
+  }
 
-    .main {
-      background: linear-gradient(90deg, #7b2ff7, #00c6ff);
-      color: white;
-    }
+  .main {
+    background: linear-gradient(90deg, #7b2ff7, #00c6ff);
+    color: white;
+  }
 
-    /* inputs */
-    input {
-      width: 100%;
-      padding: 10px;
-      margin-bottom: 10px;
-      border-radius: 8px;
-      border: none;
-      background: rgba(255, 255, 255, 0.08);
-      color: white;
-    }
+  /* inputs */
+  input {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border-radius: 8px;
+    border: none;
+    background: rgba(255, 255, 255, 0.08);
+    color: white;
+  }
 
-    /* divider */
-    .line {
-      text-align: center;
-      margin: 10px 0;
-      color: #888;
-      font-size: 12px;
-    }
+  /* divider */
+  .line {
+    text-align: center;
+    margin: 10px 0;
+    color: #888;
+    font-size: 12px;
+  }
 
-    /* النص الجانبي */
-    .info {
-      width: 45%;
-    }
+  /* النص الجانبي */
+  .info {
+    width: 45%;
+  }
 
-    .info h1 {
-      font-size: 32px;
-      margin-bottom: 15px;
-    }
+  .info h1 {
+    font-size: 32px;
+    margin-bottom: 15px;
+  }
 
-    .info span {
-      color: #7b2ff7;
-    }
+  .info span {
+    color: #7b2ff7;
+  }
 
-    .info p {
-      color: #aaa;
-    }
+  .info p {
+    color: #aaa;
+  }
 
-    /* footer */
-    .switch {
-      text-align: center;
-      font-size: 13px;
-      margin-top: 10px;
-    }
+  /* footer */
+  .switch {
+    text-align: center;
+    font-size: 13px;
+    margin-top: 10px;
+  }
 
-    .switch a {
-      color: #00c6ff;
-      text-decoration: none;
-    }
+  .switch a {
+    color: #00c6ff;
+    text-decoration: none;
+  }
 
-    /* الفورم */
-    .form-box {
-      position: absolute;
-      top: 80px;
-      left: 200px;
-      width: 420px;
-      padding: 30px;
-      border-radius: 16px;
-      background: rgba(255, 255, 255, 0.05);
-      backdrop-filter: blur(20px);
-      border: 1px solid rgba(255, 255, 255, 0.08);
-    }
+  /* الفورم */
+  .form-box {
+    position: absolute;
+    top: 80px;
+    left: 200px;
+    width: 420px;
+    padding: 30px;
+    border-radius: 16px;
+    background: rgba(255, 255, 255, 0.05);
+    backdrop-filter: blur(20px);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+  }
 
-    .form-box h2 {
-      text-align: start;
-    }
+  .form-box h2 {
+    text-align: start;
+  }
 
-    .sub {
-      text-align: start;
-      font-size: 13px;
-      color: #aaa;
-      margin-bottom: 15px;
-    }
+  .sub {
+    text-align: start;
+    font-size: 13px;
+    color: #aaa;
+    margin-bottom: 15px;
+  }
 
-    button {
-      width: 100%;
-      padding: 11px;
-      margin-bottom: 10px;
-      border-radius: 8px;
-      border: none;
-      cursor: pointer;
-    }
+  button {
+    width: 100%;
+    padding: 11px;
+    margin-bottom: 10px;
+    border-radius: 8px;
+    border: none;
+    cursor: pointer;
+  }
 
-    .google {
-      background: white;
-      color: black;
-    }
+  .google {
+    background: white;
+    color: black;
+  }
 
-    .github {
-      background: #2f3245;
-      color: white;
-    }
+  .github {
+    background: #2f3245;
+    color: white;
+  }
 
-    .divider {
-      text-align: center;
-      font-size: 12px;
-      color: #777;
-      margin: 10px 0;
-    }
+  .divider {
+    text-align: center;
+    font-size: 12px;
+    color: #777;
+    margin: 10px 0;
+  }
 
-    label {
-      display: block;
-      font-size: 13px;
-      margin: 10px 0 5px;
-      color: #ccc;
-    }
+  label {
+    display: block;
+    font-size: 13px;
+    margin: 10px 0 5px;
+    color: #ccc;
+  }
 
-    .input {
-      display: flex;
-      align-items: center;
-      background: rgba(255, 255, 255, 0.08);
-      padding: 11px;
-      border-radius: 8px;
-      margin-bottom: 10px;
-    }
+  .input {
+    display: flex;
+    align-items: center;
+    background: rgba(255, 255, 255, 0.08);
+    padding: 11px;
+    border-radius: 8px;
+    margin-bottom: 10px;
+  }
 
-    .input i {
-      margin-left: 10px;
-      color: #aaa;
-    }
+  .input i {
+    margin-left: 10px;
+    color: #aaa;
+  }
 
-    .input input {
-      width: 100%;
-      border: none;
-      background: transparent;
-      color: white;
-      outline: none;
-    }
+  .input input {
+    width: 100%;
+    border: none;
+    background: transparent;
+    color: white;
+    outline: none;
+  }
 
-    /* زر */
-    .submit {
-      background: linear-gradient(90deg, #8a2be2, #00bfff);
-      color: white;
-    }
+  /* زر */
+  .submit {
+    background: linear-gradient(90deg, #8a2be2, #00bfff);
+    color: white;
+  }
 
-    /* footer */
-    .footer {
-      text-align: center;
-      font-size: 13px;
-      margin-top: 10px;
-      color: #aaa;
-    }
+  /* footer */
+  .footer {
+    text-align: center;
+    font-size: 13px;
+    margin-top: 10px;
+    color: #aaa;
+  }
 
-    .footer a {
-      color: #00bfff;
-      text-decoration: none;
-    }
+  .footer a {
+    color: #00bfff;
+    text-decoration: none;
+  }
 
-    /* النص */
-    .content {
-      position: absolute;
-      width: 552px;
-      height: 456px;
-      top: 216px;
-      left: 785px;
-      text-align: right;
-    }
+  /* النص */
+  .content {
+    position: absolute;
+    width: 552px;
+    height: 456px;
+    top: 216px;
+    left: 785px;
+    text-align: right;
+  }
 
-    .brand {
-      display: flex;
-      align-items: center;
-      gap: 8px;
-      margin-bottom: 15px;
-      font-size: 14px;
-      color: #ddd;
-    }
+  .brand {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin-bottom: 15px;
+    font-size: 14px;
+    color: #ddd;
+  }
 
-    .brand i {
-      color: #8a2be2;
-    }
+  .brand i {
+    color: #8a2be2;
+  }
 
-    .content h1 {
-      font-size: 48px;
-      line-height: 60px;
-      margin-bottom: 12px;
-    }
+  .content h1 {
+    font-size: 48px;
+    line-height: 60px;
+    margin-bottom: 12px;
+  }
 
-    .ai {
-      background: linear-gradient(90deg, #8a2be2, #00bfff);
-      -webkit-background-clip: text;
-      -webkit-text-fill-color: transparent;
-    }
+  .ai {
+    background: linear-gradient(90deg, #8a2be2, #00bfff);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
 
-    .desc {
-      font-size: 13px;
-      color: #aaa;
-      margin-bottom: 18px;
-      line-height: 1.6;
-    }
+  .desc {
+    font-size: 13px;
+    color: #aaa;
+    margin-bottom: 18px;
+    line-height: 1.6;
+  }
 
-    .content ul {
-      list-style: none;
-    }
+  .content ul {
+    list-style: none;
+  }
 
-    .content li {
-      font-size: 13px;
-      margin-bottom: 10px;
-      padding-right: 18px;
-      position: relative;
-    }
+  .content li {
+    font-size: 13px;
+    margin-bottom: 10px;
+    padding-right: 18px;
+    position: relative;
+  }
 
-    .content li::before {
-      content: "•";
-      position: absolute;
-      right: 0;
-      color: #8a2be2;
-    }
+  .content li::before {
+    content: "•";
+    position: absolute;
+    right: 0;
+    color: #8a2be2;
+  }
 
-    .terms {
-      text-align: center;
-      font-size: 12px;
-      color: #aaa;
-      margin-top: 10px;
-      line-height: 1.6;
-    }
+  .terms {
+    text-align: center;
+    font-size: 12px;
+    color: #aaa;
+    margin-top: 10px;
+    line-height: 1.6;
+  }
 
-    .terms span {
-      color: #8a2be2;
-      cursor: pointer;
-    }
-  </style>
+  .terms span {
+    color: #8a2be2;
+    cursor: pointer;
+  }
+</style>
 </head>
 
 <body>
-
-<<<<<<< HEAD
   <div class="container">
 
     <!-- الفورم -->
@@ -364,49 +360,47 @@
         <span>سياسة الخصوصية</span>
       </p>
 
-=======
-    <!-- SignUp -->
-    <div class="container">
+      <!-- SignUp -->
+      <div class="container">
         <div class="SignUp">
-            <h2>انشاء الحساب</h2>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. </p>
-            <input type="text" id="name" placeholder="الاسم" required>
-            <input type="email" id="email" placeholder=" البريد الالكتروني" required>
-            <input type="password" id="password" placeholder="كلمة المرور" required>
-            <input type="password" id="confirm" placeholder="تأكيد كلمة المرور" required>
-            <button type="submit"> تسجيل </button>
+          <h2>انشاء الحساب</h2>
+          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. </p>
+          <input type="text" id="name" placeholder="الاسم" required>
+          <input type="email" id="email" placeholder=" البريد الالكتروني" required>
+          <input type="password" id="password" placeholder="كلمة المرور" required>
+          <input type="password" id="confirm" placeholder="تأكيد كلمة المرور" required>
+          <button type="submit"> تسجيل </button>
         </div>
->>>>>>> 1d1a1b7c4da61612b8e28c60a815d78f87e2a75d
-    </div>
-
-    <!-- النص -->
-    <div class="content">
-
-      <div class="brand">
-        <img src="assets/imgs/div.logo-icon.svg" alt="">
-        <span>Quick Gen</span>
       </div>
 
-      <h1>
-        حول مستقبلك مع <br>
-        <span class="ai">مهارات الذكاء الاصطناعي</span>
-      </h1>
+      <!-- النص -->
+      <div class="content">
 
-      <p class="desc">
-        انضم إلى +35,000 طالب يتعلمون الذكاء الاصطناعي
-        ويطورون مهاراتهم العملية
-      </p>
+        <div class="brand">
+          <img src="assets/imgs/div.logo-icon.svg" alt="">
+          <span>Quick Gen</span>
+        </div>
 
-      <ul>
-        <li>الوصول لجميع الدورات</li>
-        <li>صندوق أدوات الذكاء الاصطناعي</li>
-        <li>مشاريع عملية حقيقية</li>
-        <li>شهادة معتمدة عند الإنجاز</li>
-      </ul>
+        <h1>
+          حول مستقبلك مع <br>
+          <span class="ai">مهارات الذكاء الاصطناعي</span>
+        </h1>
+
+        <p class="desc">
+          انضم إلى +35,000 طالب يتعلمون الذكاء الاصطناعي
+          ويطورون مهاراتهم العملية
+        </p>
+
+        <ul>
+          <li>الوصول لجميع الدورات</li>
+          <li>صندوق أدوات الذكاء الاصطناعي</li>
+          <li>مشاريع عملية حقيقية</li>
+          <li>شهادة معتمدة عند الإنجاز</li>
+        </ul>
+
+      </div>
 
     </div>
-
-  </div>
 
 </body>
 

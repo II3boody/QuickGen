@@ -15,6 +15,63 @@
     <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.rtl.min.css">
 
     <link rel="stylesheet" href="css/style.css">
+
+
+    <style>
+        :root {
+            --primary-grad: linear-gradient(121.46deg, #A78BFA 0%, #22D3EE 100%);
+            --text-muted: #99A1AF;
+            --success: #00C950;
+        }
+
+
+
+
+        .completed .status-box {
+            background: var(--success);
+            color: white;
+        }
+
+        .completed .btn {
+            background: rgba(0, 201, 80, 0.15);
+            color: var(--success);
+            border: 1px solid var(--success);
+        }
+
+        .active {
+            background: rgba(30, 41, 57, 0.6);
+            border-top: 1.5px solid #AD46FF;
+        }
+
+        .active .status-box {
+            background: var(--progress-grad);
+            color: white;
+        }
+
+
+        #view-page .level-card.locked {
+            background: rgba(255, 255, 255, 0.02);
+            opacity: 0.6;
+        }
+
+        .locked .status-box {
+            background: #364153;
+            color: var(--text-muted);
+        }
+
+        #view-page .locked .btn {
+            background: #36415380;
+            color: var(--text-muted);
+            width: 100%;
+            cursor: not-allowed;
+        }
+
+        #view-page .hero-title .text-primary {
+            background: var(--primary-grad);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+    </style>
 </head>
 
 <body>
@@ -38,12 +95,12 @@
 
             <!-- Links -->
             <ul class="nav-links" id="navLinks">
-                <li><a href="index.html">الرئيسية</a></li>
+                <li><a href="index.html" class="active">الرئيسية</a></li>
                 <li><a href="Educational.html">المسارات</a></li>
-                <li><a href="courses.html">الكورسات</a></li>
+                <li><a href="#">الكورسات</a></li>
                 <li><a href="#">توليد برومبت</a></li>
                 <li><a href="#">الشهادات</a></li>
-                <li><a href="contact-us.html" class="active">تواصل معنا</a></li>
+                <li><a href="#">تواصل معنا</a></li>
 
                 <!-- Mobile Actions -->
                 <li class="mobile-only">
@@ -69,75 +126,115 @@
 
         </div>
     </nav>
-
-    <section id="contact" class="py-5">
+    <section id="view-page" class="d-flex flex-column align-items-center my-4 py-5">
         <!-- Hero -->
-        <div class="container d-flex justify-content-center align-items-center flex-column gap-5">
+        <div class="container d-flex justify-content-center align-items-center flex-column gap-5 my-5">
             <div class="hero-section text-center">
                 <h1 class="hero-title">
-                    <span class="text-white">تواصل</span>
-                    <span class="primary-text">معنا</span>
+                    <span class="text-white">مسار</span>
+                    <span class="primary-text">التأسيس</span>
                 </h1>
                 <p class="hero-subtitle">
-                    كورسات شاملة مصممة لنقلك من مبتدئ إلى محترف في الذكاء الاصطناعي
+                    >فهم الذكاء الاصطناعي من الصفر. مناسب لأي حد حتى لو مش عنده أي خبرة تقنية
                 </p>
             </div>
-            <div class="holder d-flex flex-row-reverse gap-5 my-5">
-                <div class="contact-form p-4 gap-3">
-                    <div class="form-row">
-                        <div class="form-group">
-                            <label>الاسم</label>
-                            <input type="text" placeholder="أدخل اسمك">
-                        </div>
-                        <div class="form-group">
-                            <label>البريد الإلكتروني</label>
-                            <input type="email" placeholder="أدخل بريدك الإلكتروني">
-                        </div>
-                    </div>
 
-                    <div class="form-group">
-                        <label>الموضوع</label>
-                        <input type="text" placeholder="موضوع الرسالة">
+            <div class="dashboard-card p-4 mb-5">
+                <div class="stats-grid">
+                    <div class="stat-box"><span class="stat-label">الوقت المتبقي المقدر</span><span
+                            class="stat-value">18
+                            أسبوع</span></div>
+                    <div class="stat-box"><span class="stat-label">المستويات المكتملة</span><span
+                            class="stat-value">1/5</span>
                     </div>
-
-                    <div class="form-group">
-                        <label>الرسالة</label>
-                        <textarea rows="5" placeholder="اكتب رسالتك هنا..."></textarea>
-                    </div>
-
-                    <button class="btn start">
-                        إرسال الرسالة <i class="fas fa-paper-plane"></i>
-                    </button>
+                    <div class="stat-box"><span class="stat-label">التقدم الإجمالي</span><span
+                            class="stat-value grad">40%</span></div>
                 </div>
-
-                <div class="contact-info">
-                    <div class="info-card">
-                        <div class="info-text">
-                            <h3>البريد الإلكتروني</h3>
-                            <p>info@ailearning.com</p>
-                        </div>
-                        <div class="info-icon"> <i class="fa-regular fa-envelope"></i></div>
-
-                    </div>
-
-                    <div class="info-card">
-                        <div class="info-text">
-                            <h3>الهاتف</h3>
-                            <p dir="ltr">+966 50 123 4567</p>
-                        </div>
-                        <div class="info-icon"><i class="fa-regular fa-phone"></i></div>
-                    </div>
-
-                    <div class="info-card">
-                        <div class="info-text">
-                            <h3>ساعات العمل</h3>
-                            <p>السبت - الخميس: 9ص - 6م</p>
-                        </div>
-                        <div class="info-icon"><i class="fa-regular fa-clock"></i></div>
-                    </div>
+                <div class="progress-container">
+                    <div class="progress-bar" style="width: 40%;"></div>
                 </div>
             </div>
-        </div>
+
+            <div class="roadmap-container">
+                <div class="level-card completed">
+                    <div class="right-side">
+                        <div class="status-box"><i class="fa-regular fa-circle-check"></i></div>
+                        <div class="text-group">
+                            <span class="level-num">المستوي 1</span>
+                            <h3>أساسيات الذكاء الاصطناعي</h3>
+                            <p>المفاهيم الأساسية والمصطلحات</p>
+                            <div class="chip">أساسيات الذكاء الاصطناعي <i class="fa-solid fa-book-open"></i></div>
+                            <button class="btn">مكتمل <i class="fa-regular fa-circle-check"></i></button>
+                        </div>
+                    </div>
+                    <div class="time-tag">4 أسابيع <i class="fa-regular fa-clock"></i></div>
+                </div>
+                <div class="connector active"></div>
+
+                <div class="level-card active">
+                    <div class="right-side">
+                        <div class="status-box">2</div>
+                        <div class="text-group">
+                            <span class="level-num">المستوي 2</span>
+                            <h3>أدوات الذكاء الاصطناعي</h3>
+                            <p>إتقان ChatGPT و Claude و AI APIs</p>
+                            <div class="chip"> إتقان أدوات الذكاء الاصطناعي <i class="fa-solid fa-book-open"></i></div>
+                            <button class="btn start">متابعة التعلم ←</button>
+                        </div>
+                    </div>
+                    <div class="time-tag">2 أسبوع <i class="fa-regular fa-clock"></i></div>
+                </div>
+                <div class="connector active"></div>
+
+                <div class="level-card active">
+                    <div class="right-side">
+                        <div class="status-box">3</div>
+                        <div class="text-group">
+                            <span class="level-num">المستوى 3</span>
+                            <h3>الأتمتة وبدون كود</h3>
+                            <p>البناء بدون برمجة</p>
+                            <div class="chip"> الأتمتة بالذكاء الاصطناعي وبدون كود <i class="fa-solid fa-book-open"></i>
+                            </div>
+                            <button class="btn start">ابدأ المستوى ←</button>
+                        </div>
+                    </div>
+                    <div class="time-tag">5 أسابيع <i class="fa-regular fa-clock"></i></div>
+                </div>
+                <div class="connector"></div>
+
+                <div class="level-card locked">
+                    <div class="right-side">
+                        <div class="status-box"><i class="fa-solid fa-lock"></i> </div>
+                        <div class="text-group">
+                            <span class="level-num">المستوي 4</span>
+                            <h3>المشاريع الواقعية</h3>
+                            <p>أعمال جاهزة للعرض</p>
+                            <div class="chip">مشاريع الذكاء الاصطناعي الواقعية <i class="fa-solid fa-book-open"></i>
+                            </div>
+                            <button class="btn">أكمل المستوى السابق لفتح هذا المستوى <i class="fa-solid fa-lock"></i>
+                            </button>
+                        </div>
+                    </div>
+                    <div class="time-tag">6 أسابيع <i class="fa-regular fa-clock"></i></div>
+                </div>
+                <div class="connector"></div>
+
+                <div class="level-card locked">
+                    <div class="right-side">
+                        <div class="status-box"><i class="fa-solid fa-lock"></i> </div>
+                        <div class="text-group">
+                            <span class="level-num">المستوى 5</span>
+                            <h3>العمل الحر</h3>
+                            <p>ابدأ الكسب بالذكاء الاصطناعي</p>
+                            <div class="chip">العمل الحر والدخل بالذكاء الاصطناعي <i class="fa-solid fa-book-open"></i>
+                            </div>
+                            <button class="btn">أكمل المستوى السابق لفتح هذا المستوى <i class="fa-solid fa-lock"></i>
+                            </button>
+                        </div>
+                    </div>
+                    <div class="time-tag">4 أسابيع <i class="fa-regular fa-clock"></i></div>
+                </div>
+            </div>
     </section>
 
 

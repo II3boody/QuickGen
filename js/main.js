@@ -23,8 +23,10 @@ $(window).on("scroll", function () {
 
   let scrollPos = $(window).scrollTop();
 
-  if ($("section").eq(1).length) {
-    let sectionOffset = $("section").eq(1).offset().top;
+  let sections = $("section");
+
+  if (sections.length > 1) {
+    let sectionOffset = sections.eq(1).offset().top;
 
     if (scrollPos >= sectionOffset - 20) {
       nav.addClass("is-fixed").removeClass("hide-nav");
@@ -59,3 +61,4 @@ $(window).on("resize", function () {
     $("body").css("margin-top", 0);
   }
 });
+

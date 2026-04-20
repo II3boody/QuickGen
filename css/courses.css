@@ -17,7 +17,7 @@
     box-sizing: border-box;
 }
 
-/* تنسيق الحاوية */
+
 body {
     font-family: "Cairo", sans-serif !important;
     background: #080a10;
@@ -68,41 +68,35 @@ body {
     gap: 15px;
 }
 
-/* تنسيق الزر في الحالة العادية */
+
 .nav-btn {
-    text-decoration: none;
-    display: inline-block;
-    padding: 10px 25px;
-    border-radius: 12px;
-    background-color: #1e2632;
-    /* اللون الرمادي للأزرار */
-    color: #a0a5ad;
-    /* لون النص */
-    font-size: 16px;
+    background-color: #1e2632 !important;
+    color: var(--disabled-text);
     transition: all 0.3s ease;
-    /* عشان الحركة تكون ناعمة */
+    background-image: none !important;
+
 }
 
-/* التنسيق عند مرور الماوس (الهوفر) */
+
 .nav-btn:hover {
-    background-color: #a855f7;
-    /* اللون البنفسجي */
+    background-color: #a855f7 !important;
+
     color: #ffffff !important;
-    /* النص يتحول للأبيض */
+
     transform: translateY(-2px);
-    /* حركة اختيارية بسيطة لفوق */
+
     box-shadow: 0 5px 15px rgba(168, 85, 247, 0.3);
-    /* توهج بنفسجي */
+
 }
 
-/* إذا أردت أن يبقى الزر "المختار حالياً" بنفسجي أيضاً */
+
 .nav-btn:active,
 .nav-btn.active {
     background-color: #a855f7;
     color: white;
 }
 
-/* الحاوية الرئيسية للكرت */
+
 :root {
     --primary-bg: #0b1120;
     --card-bg: rgba(255, 255, 255, 0.05);
@@ -114,7 +108,7 @@ body {
 body {
     background-color: var(--primary-bg);
     direction: rtl;
-    /* للغة العربية */
+
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
@@ -129,9 +123,28 @@ body {
     color: #99a1af;
 }
 
+#cards .btns-holder button {
+    border: none;
+}
+
+@media (max-width:767px) {
+    #cards .btns-holder {
+        justify-content: center;
+    }
+}
+
+
+
 #cards .row {
     grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
     gap: 20px;
+}
+
+@media (max-width:767px) {
+    #cards .row {
+        width: 85%;
+        margin: 0 auto;
+    }
 }
 
 #cards .row .card {
@@ -150,6 +163,19 @@ body {
     justify-content: space-between;
 }
 
+#cards .row .card .card-body h5 {
+    color: #ffffff;
+    font-weight: 700;
+    font-size: 20PX;
+}
+
+#cards .row .card .card-body h6 {
+    color: #99a1af;
+    font-size: 14px;
+    font-weight: 400;
+
+}
+
 #cards .row .card .info {
     flex-wrap: wrap;
     justify-content: space-between;
@@ -165,4 +191,115 @@ body {
     display: flex;
     align-items: center;
     gap: 5px;
+}
+
+.cta button {
+    display: inline-block;
+    background: linear-gradient(90deg, #7c3aed, #4f46e5);
+    font-weight: 700;
+    text-decoration: none;
+    font-size: 17px;
+    padding: 12px 32px;
+    border-radius: 12px;
+    color: #ffffff;
+
+}
+
+
+#cards .card .info .star {
+    color: gold;
+}
+
+#cards .info span {
+    color: #99a1af;
+}
+
+body {
+    background-color: #07090f !important;
+}
+
+#cards .card img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+#cards .card {
+    width: 100% !important;
+    max-width: 100% !important;
+}
+
+
+#cards .card {
+    flex: 1 1 33.333%;
+}
+
+#cards .card {
+    transition: all 0.3s ease;
+}
+
+#cards .card:hover {
+    transform: translateY(-8px);
+    border-color: #3b82f6;
+}
+
+.card-actions button {
+    border-radius: 20px;
+    background: var(--primary-gradient);
+    color: white;
+    border: none;
+    font-size: 8px;
+    padding: 4px 8px;
+    height: 20px;
+    line-height: 1;
+}
+
+.card-actions .registered-btn {
+    background: #22c55e !important;
+    color: #fff !important;
+    border: none;
+    border-radius: 20px;
+}
+
+.card .card-actions .enrolled-btn {
+    background: #364153;
+    color: white;
+    border: none;
+    transition: 0.3s;
+}
+
+.card-actions button h6 {
+    font-size: 10px;
+
+}
+
+.enrolled-btn h6 {
+    font-size: 10px;
+    color: white;
+}
+
+.course-progress {
+    height: 6px;
+    border-radius: 10px;
+    background-color: #1e2632;
+    margin: 0;
+    overflow: hidden;
+}
+
+.course-progress .progress-bar {
+    background: linear-gradient(90deg, #7c3aed, #4f46e5);
+}
+
+
+
+@media (max-width: 992px) {
+    #cards .card {
+        flex: 1 1 50%;
+    }
+}
+
+@media (max-width: 576px) {
+    #cards .card {
+        flex: 1 1 100%;
+    }
 }

@@ -6,9 +6,9 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>QuickGen</title>
 
-  <link rel="stylesheet" href="./node_modules/@fortawesome/fontawesome-free/css/all.min.css" />
+  <link rel="stylesheet" href="node_modules/@fortawesome/fontawesome-free/css/all.min.css" />
 
-  <link rel="stylesheet" href="./node_modules/bootstrap/dist/css/bootstrap.rtl.min.css" />
+  <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.rtl.min.css" />
 
   <link rel="stylesheet" href="css/style.css" />
 
@@ -17,12 +17,14 @@
 </head>
 
 <body>
+
   <div id="loading" class="align-items-center justify-content-center">
     <div class="spinner">
       <div class="double-bounce1"></div>
       <div class="double-bounce2"></div>
     </div>
   </div>
+
   <!-- Navbar -->
   <nav class="navbar">
     <div class="container">
@@ -36,11 +38,11 @@
       <!-- Links -->
       <ul class="nav-links" id="navLinks">
         <li><a href="index.html">الرئيسية</a></li>
-        <li><a href="Educational.html" class="active">المسارات</a></li>
-        <li><a href="#">الكورسات</a></li>
+        <li><a href="#cards" class="active">المسارات</a></li>
+        <li><a href="courses.html">الكورسات</a></li>
         <li><a href="#">توليد برومبت</a></li>
         <li><a href="#">الشهادات</a></li>
-        <li><a href="#">تواصل معنا</a></li>
+        <li><a href="contact-us.html">تواصل معنا</a></li>
 
         <!-- Mobile Actions -->
         <li class="mobile-only">
@@ -67,275 +69,275 @@
     </div>
   </nav>
 
-  <div class="container d-flex align-items-center justify-content-center text-center mt-5">
-    <div class="hero-section">
-      <h1 class="hero-title">
-        <span class="text-white">تعلم</span>
-        <span class="primary-text">بالطريقة الصحيحة</span>
-      </h1>
 
-      <p class="hero-subtitle">
-        نحن لا نُدرّس النظريات فقط. نحول الطلاب إلى محترفين عاملين في مجال
-        الذكاء الاصطناعي.
-      </p>
-    </div>
-  </div>
 
-  <!-- cards -->
-  <section class="container">
-    <div class="row g-4 justify-content-center">
-      <!-- card 1 -->
-      <div class="col-lg-4 col-md-6">
-        <div class="path-card">
-          <div class="d-flex justify-content-between align-items-center mb-2">
-            <div class="icon d-inline-flex justify-content-center align-items-center">
-              <i class="fa-solid fa-book-open"></i>
-            </div>
-
-            <span class="custom-badge">مبتدئ</span>
-          </div>
-
-          <h4 class="mt-4">مسار التاسيس</h4>
-
-          <p class="text-secondary">
-            فهم الذكاء الاصطناعي من الصفر — مناسب لأي حد حتى لو مش عندك خبرة
-            تقنية
-          </p>
-
-          <div class="mb-4">
-            <span class="info-badge">8 كورسات</span>
-            <span class="info-badge">6 أسابيع</span>
-            <span class="info-badge">مدفوع</span>
-          </div>
-
-          <button class="start-btn">ابدأ المسار</button>
-        </div>
+  <section id="cards" class="py-5">
+    <div class="container">
+      <div class="hero-section text-center my-5">
+        <h1 class="hero-title">
+          <span class="text-white">تعلم</span>
+          <span class="primary-text">بالطريقة الصحيحة</span>
+        </h1>
+        <p class="hero-subtitle">
+          نحن لا نُدرّس النظريات فقط. نحول الطلاب إلى محترفين عاملين في مجال
+          الذكاء الاصطناعي.
+        </p>
       </div>
 
-      <!-- card 2 -->
+      <div class="row g-4 justify-content-center">
+        <!-- cards -->
+        <div class="col-lg-4 col-md-6">
+          <div class="path-card">
+            <div class="d-flex justify-content-between align-items-center mb-2">
+              <div class="icon d-inline-flex justify-content-center align-items-center">
+                <i class="fa-solid fa-book-open"></i>
+              </div>
 
-      <div class="col-lg-4 col-md-6">
-        <div class="path-card">
-          <div class="d-flex justify-content-between align-items-center mb-2">
-            <div class="icon d-inline-flex justify-content-center align-items-center">
-              <i class="fa-solid fa-book-open"></i>
+              <span class="custom-badge">مبتدئ</span>
             </div>
 
-            <span class="custom-badge">مبتدئ</span>
+            <h4 class="mt-4">مسار التاسيس</h4>
+
+            <p class="text-secondary">
+              فهم الذكاء الاصطناعي من الصفر — مناسب لأي حد حتى لو مش عندك خبرة
+              تقنية
+            </p>
+
+            <div class="mb-4">
+              <span class="info-badge">8 كورسات</span>
+              <span class="info-badge">6 أسابيع</span>
+              <span class="info-badge">مدفوع</span>
+            </div>
+
+            <button class="btn start">ابدأ المسار</button>
           </div>
-
-          <h4 class="mt-4">مسار ال UI UX ب ال AI</h4>
-
-          <p class="text-secondary">
-            فهم الذكاء الاصطناعي من الصفر — مناسب لأي حد حتى لو مش عندك خبرة
-            تقنية
-          </p>
-
-          <div class="mb-4">
-            <span class="info-badge">8 كورسات</span>
-            <span class="info-badge">6 أسابيع</span>
-            <span class="info-badge">مدفوع</span>
-          </div>
-
-          <button class="start-btn">ابدأ المسار</button>
         </div>
-      </div>
 
-      <!-- card 3 -->
+        <!-- card 2 -->
 
-      <div class="col-lg-4 col-md-6">
-        <div class="path-card">
-          <div class="d-flex justify-content-between align-items-center mb-2">
-            <div class="icon d-inline-flex justify-content-center align-items-center">
-              <i class="fa-solid fa-book-open"></i>
+        <div class="col-lg-4 col-md-6">
+          <div class="path-card">
+            <div class="d-flex justify-content-between align-items-center mb-2">
+              <div class="icon d-inline-flex justify-content-center align-items-center">
+                <i class="fa-solid fa-book-open"></i>
+              </div>
+
+              <span class="custom-badge">مبتدئ</span>
             </div>
 
-            <span class="custom-badge">مبتدئ</span>
+            <h4 class="mt-4">مسار ال UI UX ب ال AI</h4>
+
+            <p class="text-secondary">
+              فهم الذكاء الاصطناعي من الصفر — مناسب لأي حد حتى لو مش عندك خبرة
+              تقنية
+            </p>
+
+            <div class="mb-4">
+              <span class="info-badge">8 كورسات</span>
+              <span class="info-badge">6 أسابيع</span>
+              <span class="info-badge">مدفوع</span>
+            </div>
+
+            <button class="btn start">ابدأ المسار</button>
           </div>
-
-          <h4 class="mt-4">مسار ال FRONT END ب ال AI</h4>
-
-          <p class="text-secondary">
-            فهم الذكاء الاصطناعي من الصفر — مناسب لأي حد حتى لو مش عندك خبرة
-            تقنية
-          </p>
-
-          <div class="mb-4">
-            <span class="info-badge">8 كورسات</span>
-            <span class="info-badge">6 أسابيع</span>
-            <span class="info-badge">مدفوع</span>
-          </div>
-
-          <button class="start-btn">ابدأ المسار</button>
         </div>
-      </div>
 
-      <!-- card 4 -->
+        <!-- card 3 -->
 
-      <div class="col-lg-4 col-md-6">
-        <div class="path-card">
-          <div class="d-flex justify-content-between align-items-center mb-2">
-            <div class="icon d-inline-flex justify-content-center align-items-center">
-              <i class="fa-solid fa-book-open"></i>
+        <div class="col-lg-4 col-md-6">
+          <div class="path-card">
+            <div class="d-flex justify-content-between align-items-center mb-2">
+              <div class="icon d-inline-flex justify-content-center align-items-center">
+                <i class="fa-solid fa-book-open"></i>
+              </div>
+
+              <span class="custom-badge">مبتدئ</span>
             </div>
 
-            <span class="custom-badge">مبتدئ</span>
+            <h4 class="mt-4">مسار ال FRONT END ب ال AI</h4>
+
+            <p class="text-secondary">
+              فهم الذكاء الاصطناعي من الصفر — مناسب لأي حد حتى لو مش عندك خبرة
+              تقنية
+            </p>
+
+            <div class="mb-4">
+              <span class="info-badge">8 كورسات</span>
+              <span class="info-badge">6 أسابيع</span>
+              <span class="info-badge">مدفوع</span>
+            </div>
+
+            <button class="btn start">ابدأ المسار</button>
           </div>
-
-          <h4 class="mt-4">مسار Backend بـ AI</h4>
-
-          <p class="text-secondary">
-            فهم الذكاء الاصطناعي من الصفر — مناسب لأي حد حتى لو مش عندك خبرة
-            تقنية
-          </p>
-
-          <div class="mb-4">
-            <span class="info-badge">8 كورسات</span>
-            <span class="info-badge">6 أسابيع</span>
-            <span class="info-badge">مدفوع</span>
-          </div>
-
-          <button class="start-btn">ابدأ المسار</button>
         </div>
-      </div>
 
-      <!-- card 5 -->
+        <!-- card 4 -->
 
-      <div class="col-lg-4 col-md-6">
-        <div class="path-card">
-          <div class="d-flex justify-content-between align-items-center mb-2">
-            <div class="icon d-inline-flex justify-content-center align-items-center">
-              <i class="fa-solid fa-book-open"></i>
+        <div class="col-lg-4 col-md-6">
+          <div class="path-card">
+            <div class="d-flex justify-content-between align-items-center mb-2">
+              <div class="icon d-inline-flex justify-content-center align-items-center">
+                <i class="fa-solid fa-book-open"></i>
+              </div>
+
+              <span class="custom-badge">مبتدئ</span>
             </div>
 
-            <span class="custom-badge">مبتدئ</span>
+            <h4 class="mt-4">مسار Backend بـ AI</h4>
+
+            <p class="text-secondary">
+              فهم الذكاء الاصطناعي من الصفر — مناسب لأي حد حتى لو مش عندك خبرة
+              تقنية
+            </p>
+
+            <div class="mb-4">
+              <span class="info-badge">8 كورسات</span>
+              <span class="info-badge">6 أسابيع</span>
+              <span class="info-badge">مدفوع</span>
+            </div>
+
+            <button class="btn start">ابدأ المسار</button>
           </div>
-
-          <h4 class="mt-4">مسار كتابة المحتوي ب Ai</h4>
-
-          <p class="text-secondary">
-            فهم الذكاء الاصطناعي من الصفر — مناسب لأي حد حتى لو مش عندك خبرة
-            تقنية
-          </p>
-
-          <div class="mb-4">
-            <span class="info-badge">8 كورسات</span>
-            <span class="info-badge">6 أسابيع</span>
-            <span class="info-badge">مدفوع</span>
-          </div>
-
-          <button class="start-btn">ابدأ المسار</button>
         </div>
-      </div>
 
-      <!-- card 6 -->
+        <!-- card 5 -->
 
-      <div class="col-lg-4 col-md-6">
-        <div class="path-card">
-          <div class="d-flex justify-content-between align-items-center mb-2">
-            <div class="icon d-inline-flex justify-content-center align-items-center">
-              <i class="fa-solid fa-book-open"></i>
+        <div class="col-lg-4 col-md-6">
+          <div class="path-card">
+            <div class="d-flex justify-content-between align-items-center mb-2">
+              <div class="icon d-inline-flex justify-content-center align-items-center">
+                <i class="fa-solid fa-book-open"></i>
+              </div>
+
+              <span class="custom-badge">مبتدئ</span>
             </div>
 
-            <span class="custom-badge">مبتدئ</span>
+            <h4 class="mt-4">مسار كتابة المحتوي ب Ai</h4>
+
+            <p class="text-secondary">
+              فهم الذكاء الاصطناعي من الصفر — مناسب لأي حد حتى لو مش عندك خبرة
+              تقنية
+            </p>
+
+            <div class="mb-4">
+              <span class="info-badge">8 كورسات</span>
+              <span class="info-badge">6 أسابيع</span>
+              <span class="info-badge">مدفوع</span>
+            </div>
+
+            <button class="btn start">ابدأ المسار</button>
           </div>
-
-          <h4 class="mt-4">مسار العمل الحر ب Ai</h4>
-
-          <p class="text-secondary">
-            فهم الذكاء الاصطناعي من الصفر — مناسب لأي حد حتى لو مش عندك خبرة
-            تقنية
-          </p>
-
-          <div class="mb-4">
-            <span class="info-badge">8 كورسات</span>
-            <span class="info-badge">6 أسابيع</span>
-            <span class="info-badge">مدفوع</span>
-          </div>
-
-          <button class="start-btn">ابدأ المسار</button>
         </div>
-      </div>
-      <!-- card 7 -->
-      <div class="col-lg-4 col-md-6">
-        <div class="path-card">
-          <div class="d-flex justify-content-between align-items-center mb-2">
-            <div class="icon d-inline-flex justify-content-center align-items-center">
-              <i class="fa-solid fa-book-open"></i>
+
+        <!-- card 6 -->
+
+        <div class="col-lg-4 col-md-6">
+          <div class="path-card">
+            <div class="d-flex justify-content-between align-items-center mb-2">
+              <div class="icon d-inline-flex justify-content-center align-items-center">
+                <i class="fa-solid fa-book-open"></i>
+              </div>
+
+              <span class="custom-badge">مبتدئ</span>
             </div>
 
-            <span class="custom-badge">مبتدئ</span>
+            <h4 class="mt-4">مسار العمل الحر ب Ai</h4>
+
+            <p class="text-secondary">
+              فهم الذكاء الاصطناعي من الصفر — مناسب لأي حد حتى لو مش عندك خبرة
+              تقنية
+            </p>
+
+            <div class="mb-4">
+              <span class="info-badge">8 كورسات</span>
+              <span class="info-badge">6 أسابيع</span>
+              <span class="info-badge">مدفوع</span>
+            </div>
+
+            <button class="btn start">ابدأ المسار</button>
           </div>
-
-          <h4 class="mt-4">مسار Backend بـ AI</h4>
-
-          <p class="text-secondary">
-            فهم الذكاء الاصطناعي من الصفر — مناسب لأي حد حتى لو مش عنده أي
-            خبرة تقنية
-          </p>
-
-          <div class="mb-4">
-            <span class="info-badge">8 كورسات</span>
-            <span class="info-badge">6 أسابيع</span>
-            <span class="info-badge">مدفوع</span>
-          </div>
-
-          <button class="start-btn">ابدأ المسار</button>
         </div>
-      </div>
-      <!-- card 8 -->
+        <!-- card 7 -->
+        <div class="col-lg-4 col-md-6">
+          <div class="path-card">
+            <div class="d-flex justify-content-between align-items-center mb-2">
+              <div class="icon d-inline-flex justify-content-center align-items-center">
+                <i class="fa-solid fa-book-open"></i>
+              </div>
 
-      <div class="col-lg-4 col-md-6">
-        <div class="path-card">
-          <div class="d-flex justify-content-between align-items-center mb-2">
-            <div class="icon d-inline-flex justify-content-center align-items-center">
-              <i class="fa-solid fa-book-open"></i>
+              <span class="custom-badge">مبتدئ</span>
             </div>
 
-            <span class="custom-badge">مبتدئ</span>
+            <h4 class="mt-4">مسار Backend بـ AI</h4>
+
+            <p class="text-secondary">
+              فهم الذكاء الاصطناعي من الصفر — مناسب لأي حد حتى لو مش عنده أي
+              خبرة تقنية
+            </p>
+
+            <div class="mb-4">
+              <span class="info-badge">8 كورسات</span>
+              <span class="info-badge">6 أسابيع</span>
+              <span class="info-badge">مدفوع</span>
+            </div>
+
+            <button class="btn start">ابدأ المسار</button>
           </div>
-
-          <h4 class="mt-4">مسار Backend بـ AI</h4>
-
-          <p class="text-secondary">
-            هم الذكاء الاصطناعي من الصفر — مناسب لأي حد حتى لو مش عنده أي خبرة
-            تقنية
-          </p>
-
-          <div class="mb-4">
-            <span class="info-badge">8 كورسات</span>
-            <span class="info-badge">6 أسابيع</span>
-            <span class="info-badge">مدفوع</span>
-          </div>
-
-          <button class="start-btn">ابدأ المسار</button>
         </div>
-      </div>
-      <!-- card 9 -->
-      <div class="col-lg-4 col-md-6">
-        <div class="path-card h-100">
-          <div class="d-flex justify-content-between align-items-center mb-2">
-            <div class="icon d-inline-flex justify-content-center align-items-center">
-              <i class="fa-solid fa-book-open"></i>
+        <!-- card 8 -->
+
+        <div class="col-lg-4 col-md-6">
+          <div class="path-card">
+            <div class="d-flex justify-content-between align-items-center mb-2">
+              <div class="icon d-inline-flex justify-content-center align-items-center">
+                <i class="fa-solid fa-book-open"></i>
+              </div>
+
+              <span class="custom-badge">مبتدئ</span>
             </div>
 
-            <span class="custom-badge">مبتدئ</span>
+            <h4 class="mt-4">مسار Backend بـ AI</h4>
+
+            <p class="text-secondary">
+              هم الذكاء الاصطناعي من الصفر — مناسب لأي حد حتى لو مش عنده أي خبرة
+              تقنية
+            </p>
+
+            <div class="mb-4">
+              <span class="info-badge">8 كورسات</span>
+              <span class="info-badge">6 أسابيع</span>
+              <span class="info-badge">مدفوع</span>
+            </div>
+
+            <button class="btn start">ابدأ المسار</button>
           </div>
+        </div>
+        <!-- card 9 -->
+        <div class="col-lg-4 col-md-6">
+          <div class="path-card h-100">
+            <div class="d-flex justify-content-between align-items-center mb-2">
+              <div class="icon d-inline-flex justify-content-center align-items-center">
+                <i class="fa-solid fa-book-open"></i>
+              </div>
 
-          <h4 class="mt-4">مسار كتابة المحتوي ب Ai</h4>
+              <span class="custom-badge">مبتدئ</span>
+            </div>
 
-          <p class="text-secondary">
-            فهم الذكاء الاصطناعي من الصفر — مناسب لأي حد حتى لو مش عنده أي
-            خبرة تقنية
-          </p>
+            <h4 class="mt-4">مسار كتابة المحتوي ب Ai</h4>
 
-          <div class="mb-4">
-            <span class="info-badge">8 كورسات</span>
-            <span class="info-badge">6 أسابيع</span>
-            <span class="info-badge">مدفوع</span>
+            <p class="text-secondary">
+              فهم الذكاء الاصطناعي من الصفر — مناسب لأي حد حتى لو مش عنده أي
+              خبرة تقنية
+            </p>
+
+            <div class="mb-4">
+              <span class="info-badge">8 كورسات</span>
+              <span class="info-badge">6 أسابيع</span>
+              <span class="info-badge">مدفوع</span>
+            </div>
+
+            <button class="btn start">ابدأ المسار</button>
           </div>
-
-          <button class="start-btn">ابدأ المسار</button>
         </div>
       </div>
     </div>
@@ -343,7 +345,7 @@
 
   <!-- CTA -->
 
-  <section class="cta-section">
+  <div class="cta-section py-5">
     <div class="container">
       <h2 class="title">
         ابدأ رحلتك مع <span class="highlight">AI</span> الآن
@@ -355,7 +357,7 @@
 
       <a href="#" class="btn-primary"> ابدأ من الصفر مجاناً </a>
     </div>
-  </section>
+  </div>
 
   <footer class="footer-wrap">
     <div class="footer-top">
@@ -440,10 +442,9 @@
     </div>
   </footer>
 
+  <script src="node_modules/jquery/dist/jquery.min.js"></script>
 
-  <script src="./node_modules/jquery/dist/jquery.min.js"></script>
-
-  <script src="./node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
 
   <script src="js/main.js"></script>
 </body>

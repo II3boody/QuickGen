@@ -1230,4 +1230,131 @@ ul {
   color: white;
 }
 
+#view-page .level-card.locked {
+  background: rgba(255, 255, 255, 0.02);
+  opacity: 0.6;
+}
+
+.locked .status-box {
+  background: #364153;
+  color: var(--text-muted);
+}
+
+#view-page .locked .btn {
+  background: #36415380;
+  color: var(--text-muted);
+  width: 100%;
+  cursor: not-allowed;
+}
+
+#view-page .hero-title .text-primary {
+  background: var(--primary-grad);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
 /* View Edu Page */
+
+/* sign in */
+.auth-card {
+  background: rgba(18, 26, 45, 0.6);
+  backdrop-filter: blur(15px);
+  border: 1px solid var(--card-border);
+  border-radius: 24px;
+}
+
+.btn-social {
+  border-radius: 12px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-weight: 600;
+  transition: 0.3s;
+}
+
+.btn-github {
+  background: #2d333b;
+  color: white;
+  border: 1px solid #444c56;
+}
+
+.divider-text {
+  display: flex;
+  align-items: center;
+  text-align: center;
+  font-size: 13px;
+}
+.divider-text::before,
+.divider-text::after {
+  content: "";
+  flex: 1;
+  border-bottom: 1px solid var(--card-border);
+}
+.divider-text:not(:empty)::before {
+  margin-left: 0.5em;
+}
+.divider-text:not(:empty)::after {
+  margin-right: 0.5em;
+}
+
+.input-group-custom {
+  position: relative;
+}
+.input-group-custom input {
+  background: rgba(0, 0, 0, 0.2);
+  border: 1px solid var(--card-border);
+  color: white;
+  padding: 12px 45px 12px 15px;
+  border-radius: 12px;
+}
+.input-group-custom input:focus {
+  background: rgba(0, 0, 0, 0.3);
+  border-color: var(--card-hover-border);
+  box-shadow: none;
+  color: white;
+}
+.input-group-custom i {
+  position: absolute;
+  right: 15px;
+  top: 50%;
+  transform: translateY(-50%);
+  color: var(--disabled-text);
+}
+
+.form-check-input {
+  background-color: transparent;
+  border-color: var(--card-border);
+}
+.form-check-input:checked {
+  background-color: #7c3aed;
+  border-color: #7c3aed;
+}
+
+@media (max-width: 991px) {
+  #auth-section {
+    padding: 100px 0;
+  }
+  .auth-card {
+    margin-top: 50px;
+  }
+}
+/* sign in */
+/* sign up */
+.auth-card .btn-social {
+  font-size: 14px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+.auth-card .btn-social.bg-white:hover {
+  color: var(--text-color) !important;
+}
+
+.list-unstyled li i {
+  color: #a78bfa; /* لون موحد للنقاط */
+  font-size: 8px;
+}
+
+.input-group-custom input::placeholder {
+  color: #4b5563;
+  font-size: 13px;
+}
+/* sign up */

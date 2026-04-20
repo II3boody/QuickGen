@@ -1,15 +1,3 @@
-const nav = $("nav");
-const navOffset = nav.outerHeight();
-$("body").css("margin-top", navOffset + "px");
-
-function toggleMenu() {
-  const navLinks = document.getElementById("navLinks");
-  const toggle = document.querySelector(".mobile-island-toggle");
-
-  navLinks.classList.toggle("active");
-  toggle.classList.toggle("active-toggle");
-}
-
 $(document).ready(function () {
   $(".spinner").fadeOut(300, () => {
     $("#loading").fadeOut(300, () => {
@@ -18,49 +6,63 @@ $(document).ready(function () {
   });
 });
 
-$(window).on("scroll", function () {
-  if ($(window).width() < 768) return;
+const nav = $("nav");
 
-  let scrollPos = $(window).scrollTop();
+if (nav.length > 0) {
+  const navOffset = nav.outerHeight();
+  $("body").css("margin-top", navOffset + "px");
 
-  let sections = $("section");
+  $(window).on("scroll", function () {
+    if ($(window).width() < 768) return;
 
-  if (sections.length > 1) {
-    let sectionOffset = sections.eq(1).offset().top;
+    let scrollPos = $(window).scrollTop();
+    let sections = $("section");
 
-    if (scrollPos >= sectionOffset - 20) {
-      nav.addClass("is-fixed").removeClass("hide-nav");
-    } else {
-      if (nav.hasClass("is-fixed")) {
-        nav.addClass("hide-nav");
-        $("body").css("margin-top", $("nav").outerHeight());
+    if (sections.length > 1) {
+      let sectionOffset = sections.eq(1).offset().top;
 
-        setTimeout(() => {
-          nav.removeClass("is-fixed hide-nav");
-        }, 300);
+      if (scrollPos >= sectionOffset - 20) {
+        nav.addClass("is-fixed").removeClass("hide-nav");
       } else {
-        $("body").css("margin-top", 0);
+        if (nav.hasClass("is-fixed")) {
+          nav.addClass("hide-nav");
+          $("body").css("margin-top", nav.outerHeight());
+
+          setTimeout(() => {
+            nav.removeClass("is-fixed hide-nav");
+          }, 300);
+        } else {
+          $("body").css("margin-top", 0);
+        }
       }
     }
-  }
-});
+  });
 
-$(window).on("resize", function () {
-  if ($(window).width() >= 768) {
+  $(window).on("resize", function () {
     const navLinks = document.getElementById("navLinks");
     const toggle = document.querySelector(".mobile-island-toggle");
 
-    navLinks.classList.remove("active");
-    toggle.classList.remove("active-toggle");
-  }
-});
+    if ($(window).width() >= 768) {
+      if (navLinks) navLinks.classList.remove("active");
+      if (toggle) toggle.classList.remove("active-toggle");
+    }
 
-$(window).on("resize", function () {
-  if ($(window).width() < 768) {
-    nav.removeClass("is-fixed hide-nav");
-    $("body").css("margin-top", 0);
+    if ($(window).width() < 768) {
+      nav.removeClass("is-fixed hide-nav");
+      $("body").css("margin-top", 0);
+    }
+  });
+}
+
+function toggleMenu() {
+  const navLinks = document.getElementById("navLinks");
+  const toggle = document.querySelector(".mobile-island-toggle");
+
+  if (navLinks && toggle) {
+    navLinks.classList.toggle("active");
+    toggle.classList.toggle("active-toggle");
   }
-});
+}
 
 let path = window.location.pathname;
 let page = path.split("/").pop();
@@ -72,6 +74,8 @@ if (
 ) {
   function iniatAdvert() {
     const adContainer = document.querySelector("#adContainer");
+    if (!adContainer) return;
+
     let frag = ``;
     for (let i = 0; i < 7; i++) {
       frag += `<div class="swiper-slide"><img src="assets/imgs/Logo${i + 1}.png" alt="advert"></div>`;
@@ -248,4 +252,52 @@ if (
       window.location.href = "view-educational-page.html";
     });
   });
+} // ... الكود السابق الخاص بـ Educational.html
+else if (page == "sign-up.html") {
+  const signUpForm = document.querySelector("#signup-form");
+  if (signUpForm) {
+    signUpForm.addEventListener("submit", (e) => {
+      e.preventDefault();
+
+      const name = signUpForm.querySelector('input[type="text"]').value;
+      const email = signUpForm.querySelector('input[type="email"]').value;
+      const password = signUpForm.querySelector('input[type="password"]').value;
+
+      if (name && email && password) {
+        const user = { name, email, password };
+        localStorage.setItem(email, JSON.stringify(user));
+
+        alert("تم إنشاء الحساب بنجاح! يمكنك الآن تسجيل الدخول.");
+        window.location.href = "sign-in.html";
+      } else {
+        alert("يرجى ملء جميع الحقول");
+      }
+    });
+  }
+} else if (page == "sign-in.html") {
+  const signInForm = document.querySelector("#signin-form");
+  if (signInForm) {
+    signInForm.addEventListener("submit", (e) => {
+      e.preventDefault();
+
+      const email = signInForm.querySelector('input[type="email"]').value;
+      const password = signInForm.querySelector('input[type="password"]').value;
+      const storedUser = localStorage.getItem(email);
+
+      if (storedUser) {
+        const user = JSON.parse(storedUser);
+        if (user.password === password) {
+          // حفظ جلسة الدخول
+          sessionStorage.setItem("isLoggedIn", "true");
+          sessionStorage.setItem("userName", user.name);
+
+          window.location.href = "index.html";
+        } else {
+          alert("كلمة المرور غير صحيحة!");
+        }
+      } else {
+        alert("هذا الحساب غير موجود، يرجى إنشاء حساب أولاً.");
+      }
+    });
+  }
 }

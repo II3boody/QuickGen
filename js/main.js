@@ -252,8 +252,7 @@ if (
       window.location.href = "view-educational-page.html";
     });
   });
-} // ... الكود السابق الخاص بـ Educational.html
-else if (page == "sign-up.html") {
+} else if (page == "sign-up.html") {
   const signUpForm = document.querySelector("#signup-form");
   if (signUpForm) {
     signUpForm.addEventListener("submit", (e) => {
@@ -287,7 +286,6 @@ else if (page == "sign-up.html") {
       if (storedUser) {
         const user = JSON.parse(storedUser);
         if (user.password === password) {
-          // حفظ جلسة الدخول
           sessionStorage.setItem("isLoggedIn", "true");
           sessionStorage.setItem("userName", user.name);
 

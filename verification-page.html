@@ -201,98 +201,154 @@
 
 <body>
 
-    <div class="card-container" id="search-card">
-        <div class="outer-circle verify-icon">
-            <div class="inner-circle">
-                <div class="check-mark"></div>
+    <body>
+        <div id="loading" class="align-items-center justify-content-center">
+            <div class="spinner">
+                <div class="double-bounce1"></div>
+                <div class="double-bounce2"></div>
             </div>
         </div>
-        <h1 style="font-weight: 900; font-size: 26px; margin-bottom: 10px;">ادخل رقم الشهادة</h1>
-        <p style="color: var(--text-muted); font-size: 15px; margin-bottom: 30px;">كل شهادة ليها رقم ID فريد — تقدر
-            تلاقيه في أسفل الشهادة</p>
-        <label class="input-label">رقم الشهادة</label>
-        <input type="text" id="cert-input" class="custom-input" placeholder="مثال: CERT-2026-001234">
 
-        <div class="search-row">
-            <button class="verify-btn" onclick="ViewCard()">
-                <svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24">
-                    <circle cx="11" cy="11" r="8"></circle>
-                    <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
-                </svg>
-                تحقق
-            </button>
-            <p style="color: var(--text-muted); font-size: 13px; margin-top: 10px;">أدخل رقم الشهادة الموجود في الشهادة
-                الأصلية</p>
-        </div>
+        <!-- Navbar -->
+        <nav class="navbar">
+            <div class="container">
 
-        <div class="divider"><span>أو</span></div>
-        <button class="qr-btn">
-            <svg width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
-                <rect x="3" y="3" width="7" height="7"></rect>
-                <rect x="14" y="3" width="7" height="7"></rect>
-                <rect x="14" y="14" width="7" height="7"></rect>
-                <rect x="3" y="14" width="7" height="7"></rect>
-            </svg>
-            مسح QR Code
-        </button>
-    </div>
+                <!-- Logo -->
+                <div class="nav-logo">
+                    <img src="assets/imgs/div.logo-icon.svg" alt="Logo" class="logo-icon">
+                    <span class="logo-text">Quick Gen</span>
+                </div>
 
-    <div class="card-container flex-column justify-content-center align-items-center" id="result-card">
-        <div class="outer-circle success-icon">
-            <div class="inner-circle">
-                <div class="check-mark"></div>
+                <!-- Links -->
+                <ul class="nav-links" id="navLinks">
+                    <li><a href="#home">الرئيسية</a></li>
+                    <li><a href="Educational.html">المسارات</a></li>
+                    <li><a href="courses.html">الكورسات</a></li>
+                    <li><a href="#">توليد برومبت</a></li>
+                    <li><a href="verification-page.html" class="active">الشهادات</a></li>
+                    <li><a href="contact-us.html">تواصل معنا</a></li>
+
+                    <!-- Mobile Actions -->
+                    <li class="mobile-only">
+                        <div class="nav-actions">
+                            <a href="#" class="btn login">تسجيل الدخول</a>
+                            <a href="#" class="btn start">ابدأ التعلم</a>
+                        </div>
+                    </li>
+                </ul>
+
+                <!-- Desktop Actions -->
+                <div class="nav-actions desktop-only">
+                    <a href="#" class="btn login">تسجيل الدخول</a>
+                    <a href="#" class="btn start">ابدأ التعلم</a>
+                </div>
+
+                <!-- Mobile Toggle -->
+                <div class="mobile-island-toggle" onclick="toggleMenu()">
+                    <div class="bar"></div>
+                    <div class="bar"></div>
+                    <div class="bar"></div>
+                </div>
+
             </div>
-        </div>
-        <h1 style="color: var(--success-color); font-weight: 900; font-size: 26px; margin-bottom: 5px;">شهادة صالحة</h1>
-        <div
-            style="background: rgba(34, 197, 94, 0.15); color: var(--success-color); padding: 5px 15px; border-radius: 20px; font-size: 13px; display: inline-block; margin-bottom: 30px;">
-            نشطة</div>
+        </nav>
 
-        <div class="info-grid text-white gap-3">
-            <div class="info-box gap-3">
-                <div class="icon-side"><i class="fa-regular fa-user"></i></div>
-                <div><span class="info-label">الاسم</span><span class="info-value">أحمد محمد</span></div>
-            </div>
-            <div class="info-box gap-3">
-                <div class="icon-side"><i class="fa-solid fa-award"></i></div>
-                <div><span class="info-label">المسار</span><span class="info-value">مسار التأسيس</span></div>
-            </div>
-            <div class="info-box gap-3">
-                <div class="icon-side"><i class="fa-solid fa-shield"></i></div>
-                <div><span class="info-label">رقم الشهادة</span><span class="info-value" id="display-id">---</span>
+        <div class="card-container" id="search-card">
+            <div class="outer-circle verify-icon">
+                <div class="inner-circle">
+                    <div class="check-mark"></div>
                 </div>
             </div>
-            <div class="info-box gap-3">
-                <div class="icon-side"><i class="fa-solid fa-calendar-days"></i></div>
-                <div><span class="info-label">تاريخ الإصدار</span><span class="info-value">10 أبريل 2026</span></div>
+            <h1 style="font-weight: 900; font-size: 26px; margin-bottom: 10px;">ادخل رقم الشهادة</h1>
+            <p style="color: var(--text-muted); font-size: 15px; margin-bottom: 30px;">كل شهادة ليها رقم ID فريد — تقدر
+                تلاقيه في أسفل الشهادة</p>
+            <label class="input-label">رقم الشهادة</label>
+            <input type="text" id="cert-input" class="custom-input" placeholder="مثال: CERT-2026-001234">
+
+            <div class="search-row">
+                <button class="verify-btn" onclick="ViewCard()">
+                    <svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2.5"
+                        viewBox="0 0 24 24">
+                        <circle cx="11" cy="11" r="8"></circle>
+                        <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+                    </svg>
+                    تحقق
+                </button>
+                <p style="color: var(--text-muted); font-size: 13px; margin-top: 10px;">أدخل رقم الشهادة الموجود في
+                    الشهادة
+                    الأصلية</p>
             </div>
+
+            <div class="divider"><span>أو</span></div>
+            <button class="qr-btn">
+                <svg width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                    <rect x="3" y="3" width="7" height="7"></rect>
+                    <rect x="14" y="3" width="7" height="7"></rect>
+                    <rect x="14" y="14" width="7" height="7"></rect>
+                    <rect x="3" y="14" width="7" height="7"></rect>
+                </svg>
+                مسح QR Code
+            </button>
         </div>
-        <button onclick="ShowSearch()" class="btn mt-3">تحقق
-            من شهادة أخرى</button>
-    </div>
 
-    <script>
-        function ViewCard() {
-            const inputVal = document.getElementById('cert-input').value;
-            if (inputVal.trim() === "") { alert("يرجى إدخال رقم الشهادة"); return; }
-            document.getElementById('search-card').style.display = 'none';
-            document.getElementById('result-card').style.display = 'block';
-            document.getElementById('display-id').innerText = inputVal;
-        }
+        <div class="card-container flex-column justify-content-center align-items-center" id="result-card">
+            <div class="outer-circle success-icon">
+                <div class="inner-circle">
+                    <div class="check-mark"></div>
+                </div>
+            </div>
+            <h1 style="color: var(--success-color); font-weight: 900; font-size: 26px; margin-bottom: 5px;">شهادة صالحة
+            </h1>
+            <div
+                style="background: rgba(34, 197, 94, 0.15); color: var(--success-color); padding: 5px 15px; border-radius: 20px; font-size: 13px; display: inline-block; margin-bottom: 30px;">
+                نشطة</div>
 
-        function ShowSearch() {
-            document.getElementById('search-card').style.display = 'block';
-            document.getElementById('result-card').style.display = 'none';
-        }
-    </script>
+            <div class="info-grid text-white gap-3">
+                <div class="info-box gap-3">
+                    <div class="icon-side"><i class="fa-regular fa-user"></i></div>
+                    <div><span class="info-label">الاسم</span><span class="info-value">أحمد محمد</span></div>
+                </div>
+                <div class="info-box gap-3">
+                    <div class="icon-side"><i class="fa-solid fa-award"></i></div>
+                    <div><span class="info-label">المسار</span><span class="info-value">مسار التأسيس</span></div>
+                </div>
+                <div class="info-box gap-3">
+                    <div class="icon-side"><i class="fa-solid fa-shield"></i></div>
+                    <div><span class="info-label">رقم الشهادة</span><span class="info-value" id="display-id">---</span>
+                    </div>
+                </div>
+                <div class="info-box gap-3">
+                    <div class="icon-side"><i class="fa-solid fa-calendar-days"></i></div>
+                    <div><span class="info-label">تاريخ الإصدار</span><span class="info-value">10 أبريل 2026</span>
+                    </div>
+                </div>
+            </div>
+            <button onclick="ShowSearch()" class="btn mt-3">تحقق
+                من شهادة أخرى</button>
+        </div>
+
+        <script>
+            function ViewCard() {
+                const inputVal = document.getElementById('cert-input').value;
+                if (inputVal.trim() === "") { alert("يرجى إدخال رقم الشهادة"); return; }
+                document.getElementById('search-card').style.display = 'none';
+                document.getElementById('result-card').style.display = 'block';
+                document.getElementById('display-id').innerText = inputVal;
+            }
+
+            function ShowSearch() {
+                document.getElementById('search-card').style.display = 'block';
+                document.getElementById('result-card').style.display = 'none';
+            }
+        </script>
 
 
-    <script src="https://code.jquery.com/jquery-3.7.0.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+        <script src="https://code.jquery.com/jquery-3.7.0.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 
-    <script src="js/main.js"></script>
+        <script src="js/main.js"></script>
 
 
-</body>
+    </body>
 
 </html>

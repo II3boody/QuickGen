@@ -241,4 +241,11 @@ if (
     displayTestimonials();
     iniatAdvert();
   });
+} else if (page == "Educational.html") {
+  let buttons = document.querySelectorAll("button");
+  buttons.forEach((btn) => {
+    btn.addEventListener("click", function () {
+      window.location.href = "view-educational-page.html";
+    });
+  });
 }

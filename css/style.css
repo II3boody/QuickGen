@@ -204,6 +204,10 @@ ul {
   width: 70%;
   height: 100%;
 }
+.nav-btn.active {
+  background-color: #ff00c1 !important;
+  pointer-events: none;
+}
 
 /* Global */
 
@@ -675,15 +679,8 @@ ul {
   margin-left: 6px;
 }
 
-.path-card .start-btn {
-  background: linear-gradient(90deg, #7c3aed, #4f46e5);
-  border: none;
-  padding: 12px;
-  border-radius: 12px;
-  color: white;
-  font-weight: bold;
+.path-card .btn {
   width: 100%;
-  transition: 0.3s;
 }
 
 .path-card .start-btn:hover {
@@ -811,6 +808,7 @@ ul {
   height: 64px;
   background: var(--primary-gradient);
   border-radius: var(--rad-16);
+  font-size: 24px;
 }
 
 #howTo .info p {
@@ -821,7 +819,7 @@ ul {
 #howTo .card {
   background-color: var(--card-bg);
   border: 1px solid var(--card-border);
-  min-height: 300px;
+  min-height: 250px;
   position: relative;
   transition: 0.2s;
 }
@@ -1215,6 +1213,21 @@ ul {
 .completed {
   background: rgba(0, 201, 80, 0.05);
   border-top: 1.5px solid var(--success);
+}
+#view-page .completed .status-box {
+  background: var(--success);
+  color: white;
+}
+
+#view-page .completed .btn {
+  background: rgba(0, 201, 80, 0.15);
+  color: var(--success);
+  border: 1px solid var(--success);
+}
+
+#view-page .active .status-box {
+  background: var(--progress-grad);
+  color: white;
 }
 
 /* View Edu Page */

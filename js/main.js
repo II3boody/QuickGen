@@ -179,6 +179,46 @@ if (
     },
   ];
 
+  async function fetchHomePaths() {
+    const homePathsContainer = document.querySelector("#homePathsContainer");
+    if (!homePathsContainer) return;
+
+    try {
+      const response = await fetch("https://quick-gen.runasp.net/api/paths");
+      const paths = await response.json();
+
+      const limitedPaths = paths.slice(0, 3);
+
+      let frag = "";
+      limitedPaths.forEach((path) => {
+        frag += `
+        <div class="col-lg-4 col-md-6">
+          <div class="path-card h-100 d-flex flex-column justify-content-between">
+            <div>
+              <div class="d-flex justify-content-between align-items-center mb-2">
+                <div class="icon d-inline-flex justify-content-center align-items-center">
+                  <i class="fa-solid ${path.icon || "fa-book-open"}"></i>
+                </div>
+                <span class="custom-badge">${path.levelName || "مبتدئ"}</span>
+              </div>
+              <h4 class="mt-4">${path.title}</h4>
+              <p class="text-secondary">${path.description || "وصف غير متاح"}</p>
+              <div class="mb-4">
+                <span class="info-badge">${path.coursesCount || "0"} كورسات</span>
+                <span class="info-badge">${path.duration || "6 أسابيع"}</span>
+                <span class="info-badge">${path.price === 0 ? "مجاني" : "مدفوع"}</span>
+              </div>
+            </div>
+            <button class="btn start w-100" onclick="goToPath(${path.id})">ابدأ المسار</button>
+          </div>
+        </div>`;
+      });
+      homePathsContainer.innerHTML = frag;
+    } catch (error) {
+      console.error("Error fetching home paths:", error);
+    }
+  }
+
   // features card (how to section)
   function displayFeatCards() {
     const featuresContainer = document.querySelector("#featuresContainer");
@@ -244,13 +284,7 @@ if (
     displayFeatCards();
     displayTestimonials();
     iniatAdvert();
-  });
-} else if (page == "Educational.html") {
-  let buttons = document.querySelectorAll("button");
-  buttons.forEach((btn) => {
-    btn.addEventListener("click", function () {
-      window.location.href = "view-educational-page.html";
-    });
+    fetchHomePaths();
   });
 } else if (page == "sign-up.html") {
   const signUpForm = document.querySelector("#signup-form");
@@ -298,4 +332,115 @@ if (
       }
     });
   }
+} else if (page == "courses.html") {
+  async function fetchCourses() {
+    const coursesContainer = document.querySelector("#coursesContainer");
+    if (!coursesContainer) return;
+
+    try {
+      coursesContainer.innerHTML = `<div class="text-white text-center w-100 py-5">جاري تحميل الكورسات...</div>`;
+
+      const response = await fetch("https://quick-gen.runasp.net/api/courses");
+      const courses = await response.json();
+
+      let frag = "";
+      courses.forEach((course) => {
+        const isFree = course.price === 0 || !course.price;
+        const btnText = isFree ? "ابدأ الآن" : "شراء الآن";
+
+        frag += `
+          <div class="card col-lg-4 col-md-6 col-12" style="width: 18rem">
+              <img src="${course.imageUrl || "assets/imgs/default-course.jpg"}" class="card-img-top" alt="${course.title}" />
+              
+              <div class="card-actions position-absolute top-0 start-0 m-2 d-flex gap-2">
+                  <button class="btn btn-light btn-sm shadow">
+                      <h6>المستوى ${course.level || "الأول"}</h6>
+                  </button>
+              </div>
+
+              <div class="card-body">
+                  <h5 class="card-title py-3">${course.title}</h5>
+                  <h6 class="card-subtitle mb-2 text-secondary">${course.description || ""}</h6>
+                  
+                  <div class="info text-black fs-6 d-flex justify-content-between">
+                      <div>
+                          <span> <i class="fa-regular fa-clock"></i> <p class="d-inline-block m-0 py-2">${course.duration || "4 أسابيع"}</p></span>
+                          <br>
+                          <span> <i class="fa-solid fa-book-open"></i> <p class="d-inline-block m-0 py-1">${course.studentsCount || "0"}</p></span>
+                      </div>
+                      <div>
+                          <span> <i class="fa-solid fa-user-group"></i> <p class="d-inline-block m-0 py-2">${course.lessonsCount || "0"} درس</p></span>
+                          <br>
+                          <span> <i class="fa-solid fa-star star text-warning"></i> <p class="d-inline-block m-0 py-1">${course.rating || "4.9"}</p></span>
+                      </div>
+                  </div>
+
+                  <div class="cta">
+                      <button class="btn start w-100 my-3" onclick="goToCourse(${course.id})">${btnText}</button>
+                  </div>
+              </div>
+          </div>`;
+      });
+
+      coursesContainer.innerHTML = frag;
+    } catch (error) {
+      console.error("Error fetching courses:", error);
+      coursesContainer.innerHTML = `<div class="text-danger text-center w-100 py-5">عذراً، حدث خطأ في تحميل البيانات.</div>`;
+    }
+  }
+
+  document.addEventListener("DOMContentLoaded", fetchCourses);
+} else if (page == "Educational.html") {
+  async function fetchPaths() {
+    const pathsContainer = document.querySelector("#pathsContainer");
+    if (!pathsContainer) return;
+
+    try {
+      pathsContainer.innerHTML = `<div class="text-white text-center w-100 py-5">جاري تحميل المسارات التعليمية...</div>`;
+      const response = await fetch("https://quick-gen.runasp.net/api/paths");
+      if (!response.ok) throw new Error("فشل في جلب البيانات");
+      const paths = await response.json();
+
+      let frag = "";
+      paths.forEach((path) => {
+        frag += `
+        <div class="col-lg-4 col-md-6">
+          <div class="path-card h-100 d-flex flex-column justify-content-between">
+            <div>
+              <div class="d-flex justify-content-between align-items-center mb-2">
+                <div class="icon d-inline-flex justify-content-center align-items-center">
+                  <i class="fa-solid ${path.icon || "fa-book-open"}"></i>
+                </div>
+                <span class="custom-badge">${path.levelName || "مبتدئ"}</span>
+              </div>
+              <h4 class="mt-4">${path.title}</h4>
+              <p class="text-secondary">${path.description || "وصف غير متاح"}</p>
+              <div class="mb-4">
+                <span class="info-badge">${path.coursesCount || "0"} كورسات</span>
+                <span class="info-badge">${path.duration || "6 أسابيع"}</span>
+                <span class="info-badge">${path.price === 0 ? "مجاني" : "مدفوع"}</span>
+              </div>
+            </div>
+            <button class="btn start w-100" onclick="goToPath(${path.id})">ابدأ المسار</button>
+          </div>
+        </div>`;
+      });
+      pathsContainer.innerHTML = frag;
+    } catch (error) {
+      console.error("Error:", error);
+      pathsContainer.innerHTML = `<div class="text-danger text-center w-100 py-5">حدث خطأ في تحميل المسارات.</div>`;
+    }
+  }
+
+  fetchPaths();
+} else if (page == "courses.html") {
+  fetchCourses();
+}
+
+function goToCourse(id) {
+  window.location.href = `course-details.html?id=${id}`;
+}
+
+function goToPath(id) {
+  window.location.href = `view-educational-page.html?id=${id}`;
 }

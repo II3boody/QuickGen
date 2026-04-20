@@ -343,14 +343,26 @@ if (
       const response = await fetch("https://quick-gen.runasp.net/api/courses");
       const courses = await response.json();
 
+      const baseUrl = "https://quick-gen.runasp.net";
+
       let frag = "";
       courses.forEach((course) => {
         const isFree = course.price === 0 || !course.price;
         const btnText = isFree ? "ابدأ الآن" : "شراء الآن";
 
+        let finalImageUrl = course.thumbnailUrl;
+        if (finalImageUrl && !finalImageUrl.startsWith("http")) {
+          finalImageUrl =
+            baseUrl +
+            (finalImageUrl.startsWith("/") ? "" : "/") +
+            finalImageUrl;
+        } else if (!finalImageUrl) {
+          finalImageUrl = "assets/imgs/default-course.jpg";
+        }
+
         frag += `
           <div class="card col-lg-4 col-md-6 col-12" style="width: 18rem">
-              <img src="${course.imageUrl || "assets/imgs/default-course.jpg"}" class="card-img-top" alt="${course.title}" />
+              <img src="${finalImageUrl}" class="card-img-top" alt="${course.title}" style="height: 200px; object-fit: cover;" />
               
               <div class="card-actions position-absolute top-0 start-0 m-2 d-flex gap-2">
                   <button class="btn btn-light btn-sm shadow">

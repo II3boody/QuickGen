@@ -1,0 +1,167 @@
+/* الخلفية الأساسية */
+.custom-modal-bg {
+    background-color: #12141d !important; 
+    border-radius: 28px !important; /* حواف دائرية واضحة */
+    padding: 20px;
+    border: 1px solid #1f222c !important;
+}
+
+/* صندوق الأيقونة */
+.icon-box {
+    background-color: #2b1a1d; /* أحمر داكن مكتوم */
+    color: #e54d4d;
+    width: 52px;
+    height: 52px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 8px;
+    font-size: 1.6rem;
+}
+
+/* نصوص الجسم */
+.lesson-name {
+    color: #4a86e8;
+    font-weight: 500;
+}
+
+/* الأزرار */
+.btn-delete {
+    background-color: #ef4444 !important; /* أحمر صريح نفس الصورة */
+    color: white !important;
+    border-radius: 14px !important;
+    padding: 14px !important;
+    border: none;
+    font-weight: bold;
+}
+
+.btn-cancel {
+    background-color: #1a1d27 !important; /* لون الزر الرمادي الداكن */
+    color: white !important;
+    border: 1px solid #282c39 !important;
+    border-radius: 14px !important;
+    padding: 14px !important;
+    font-weight: bold;
+}
+
+/* تحسين شكل الـ X */
+.btn-close-white {
+    opacity: 0.8;
+    font-size: 0.8rem;
+}
+
+   .custom-modal-bg {
+
+       background: linear-gradient(180deg, #0d1320, #0a1020);
+
+       border-radius: 28px;
+
+       border: 1px solid #1a2135;
+
+       box-shadow: 0 30px 80px rgba(0, 0, 0, .6);
+
+   }
+
+
+   
+
+   .modal-title {
+
+       font-weight: 700;
+
+       font-size: 22px;
+
+       color: white;
+
+   }
+
+
+   
+
+   .modal-text {
+
+       font-size: 20px;
+
+       color: #cbd5e1;
+
+   }
+
+   .lesson-name {
+
+       font-size: 22px;
+       color: #3b82f6;
+   }
+
+
+
+
+   .icon-box {
+
+       background: #3a1d24;
+
+       color: #ff4d4f;
+
+       width: 60px;
+
+       height: 60px;
+
+       display: flex;
+
+       align-items: center;
+
+       justify-content: center;
+
+       border-radius: 14px;
+
+       font-size: 28px;
+
+   }
+
+
+
+
+   .btn-cancel {
+
+       background: #111827;
+
+       border: 1px solid #1f2937;
+
+       color: white;
+
+       border-radius: 14px;
+
+       padding: 14px;
+
+       font-size: 18px;
+
+   }
+
+
+   
+
+   .btn-delete {
+
+       background: #ef4444;
+
+       color: white;
+
+       border: none;
+
+       border-radius: 5px;
+
+
+       font-size: 14px;
+
+       font-weight: bold;
+
+       transition: .2s;
+
+   }
+
+
+   .btn-delete:hover {
+
+       background: #dc2626;
+
+   }
+   

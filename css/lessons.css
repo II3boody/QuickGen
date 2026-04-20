@@ -1,0 +1,477 @@
+   body {
+       margin: 0;
+       font-family: 'Cairo', sans-serif;
+       background: #0b0e14;
+       color: white;
+   }
+
+   /* ===== Layout ===== */
+
+   .layout {
+       display: flex;
+   }
+
+   /* ===== Sidebar ===== */
+
+   .sidebar {
+
+       width: 260px;
+       height: 100vh;
+
+       background: #0B0E14;
+
+       position: fixed;
+       right: 0;
+       top: 0;
+
+       padding: 25px;
+
+       display: flex;
+       flex-direction: column;
+
+       border-left: 1px solid #ffffff10;
+
+   }
+
+   /* Logo */
+
+   .sidebar-header {
+
+       display: flex;
+       justify-content: space-between;
+       align-items: center;
+
+       margin-bottom: 40px;
+
+   }
+
+   .logo-section {
+
+       display: flex;
+       gap: 10px;
+       align-items: center;
+
+   }
+
+   .logo-text {
+
+       font-size: 18px;
+       font-weight: 700;
+
+   }
+
+   .admin-badge {
+
+       background: #ffffff10;
+
+       color: #9B7FFE;
+
+       font-size: 11px;
+
+       padding: 3px 8px;
+
+       border-radius: 6px;
+
+   }
+
+   /* Menu */
+
+   .menu-group {
+
+       margin-bottom: 25px;
+
+   }
+
+   .group-title {
+
+       font-size: 11px;
+
+       margin-bottom: 10px;
+
+       color: white;
+
+   }
+
+   .menu-item {
+
+       display: flex;
+
+       gap: 10px;
+
+       padding: 12px;
+
+       border-radius: 12px;
+
+       cursor: pointer;
+
+       transition: .3s;
+
+       color: #94A3B8;
+       text-decoration: none;
+
+   }
+
+   .menu-item:hover {
+
+       background: #ffffff08;
+
+   }
+
+   .menu-item.active {
+
+       background: #9B7FFE;
+
+       color: white;
+
+   }
+
+   .menu-group .select {
+
+       color: #9B7FFE;
+
+       font-weight: 600;
+
+   }
+
+   .menu-item:has(.select) {
+       background: #9B7FFE;
+       color: white;
+   }
+
+   /* User */
+
+   .user-profile {
+
+       margin-top: auto;
+
+       display: flex;
+
+       gap: 10px;
+
+       align-items: center;
+
+       border-top: 1px solid #ffffff10;
+
+       padding-top: 15px;
+
+   }
+
+   .avatar {
+
+       width: 40px;
+
+       height: 40px;
+
+       border-radius: 50%;
+
+   }
+
+   /* ===== Main Content ===== */
+
+   .main-content {
+
+       margin-right: 260px;
+
+       width: 100%;
+
+       padding: 40px;
+
+   }
+
+   /* Cards */
+
+   .custom-card {
+
+       background: #121620;
+
+       border: 1px solid #1f2533;
+
+       border-radius: 12px;
+
+       padding: 25px;
+
+       margin-bottom: 20px;
+
+   }
+
+   /* Inputs */
+
+   .form-control {
+
+       background: #1a1f2b;
+
+       border: 1px solid #2d3548;
+
+       color: white;
+
+   }
+
+   .form-control:focus {
+
+       background: #1a1f2b;
+
+       border-color: #635bff;
+
+       color: white;
+
+       box-shadow: none;
+
+   }
+
+   /* Button */
+
+   .btn-primary-custom {
+
+       background: #635bff;
+
+       border: none;
+
+       color: white;
+
+       padding: 8px 25px;
+
+   }
+
+   /* Table */
+
+   body {
+       background-color: #0b0e14;
+       /* لون الخلفية الغامق */
+       color: #ffffff;
+       font-family: 'Cairo', sans-serif;
+       padding: 40px;
+   }
+
+   /* تنسيق كروت البحث والجدول */
+   .custom-card {
+       background-color: #121620;
+       border: 1px solid #1f2533;
+       border-radius: 12px;
+       padding: 25px;
+       margin-bottom: 20px;
+   }
+
+   .container .text-start .desc {
+       color: #888899;
+   }
+
+   .form-control::placeholder {
+       color: #888899;
+   }
+
+   /* تنسيق المدخلات (Input) */
+   .form-control {
+       background-color: #1a1f2b;
+       border: 1px solid #2d3548;
+       color: #fff;
+       text-align: right;
+   }
+
+   .form-control:focus {
+       background-color: #1a1f2b;
+       color: #fff;
+       border-color: #635bff;
+       box-shadow: none;
+   }
+
+   /* الأزرار */
+   .btn-primary-custom {
+       background-color: #635bff;
+       border: none;
+       padding: 8px 25px;
+       color: #fff;
+   }
+
+   .status-draft {
+
+       background-color: #64748B;
+
+       color: #a0aec0;
+
+       padding: 4px 12px;
+
+       border-radius: 8px;
+
+       font-size: 14px;
+
+   }
+
+   /* الجدول */
+   .table {
+       color: #ffffff;
+       margin-bottom: 0;
+   }
+
+   .table thead th {
+       background-color: #1a1f2b;
+       border-bottom: none;
+       padding: 15px;
+       color: #a0aec0;
+       font-weight: normal;
+   }
+
+   .table tbody td {
+       padding: 15px;
+       vertical-align: middle;
+       border-bottom: 1px solid #1f2533;
+       background-color: #0b0e14;
+       color: #888899;
+   }
+
+   /* حالات المستخدم (Labels) */
+   .status-active {
+       background-color: #00c896;
+       color: #000;
+       padding: 4px 12px;
+       border-radius: 8px;
+       font-size: 14px;
+   }
+
+   .status-pending {
+       background-color: #f6ad55;
+       color: #000;
+       padding: 4px 12px;
+       border-radius: 8px;
+       font-size: 14px;
+   }
+
+   /* أزرار الإجراءات */
+   .btn-edit {
+       background-color: #4299e1;
+       border: none;
+       color: white;
+       margin-left: 3px;
+       font-size: 15px !important;
+   }
+
+   .btn-delete {
+       background-color: #f56565;
+       border: none;
+       color: white;
+       font-size: 15px !important;
+
+   }
+
+
+
+   .custom-modal-bg {
+
+       background: linear-gradient(180deg, #0d1320, #0a1020);
+
+       border-radius: 28px;
+
+       border: 1px solid #1a2135;
+
+       box-shadow: 0 30px 80px rgba(0, 0, 0, .6);
+
+   }
+
+
+   
+
+   .modal-title {
+
+       font-weight: 700;
+
+       font-size: 22px;
+
+       color: white;
+
+   }
+
+
+   
+
+   .modal-text {
+
+       font-size: 20px;
+
+       color: #cbd5e1;
+
+   }
+
+
+   
+
+   .lesson-name {
+
+       font-size: 22px;
+
+       color: #3b82f6;
+
+   }
+
+
+
+
+   .icon-box {
+
+       background: #3a1d24;
+
+       color: #ff4d4f;
+
+       width: 60px;
+
+       height: 60px;
+
+       display: flex;
+
+       align-items: center;
+
+       justify-content: center;
+
+       border-radius: 14px;
+
+       font-size: 28px;
+
+   }
+
+
+
+
+   .btn-cancel {
+
+       background: #111827;
+
+       border: 1px solid #1f2937;
+
+       color: white;
+
+       border-radius: 14px;
+
+       padding: 14px;
+
+       font-size: 18px;
+
+   }
+
+
+   
+
+   .btn-delete {
+
+       background: #ef4444;
+
+       color: white;
+
+       border: none;
+
+       border-radius: 5px;
+
+       /* padding: 14px; */
+
+       font-size: 14px;
+
+       font-weight: bold;
+
+       transition: .2s;
+
+   }
+
+
+   .btn-delete:hover {
+
+       background: #dc2626;
+
+   }
+   

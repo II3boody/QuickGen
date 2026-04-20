@@ -1,0 +1,55 @@
+.content-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 90vh;
+    /* يعتمد على طول الهيدر والفوتر عندك */
+    padding: 20px;
+
+}
+
+
+.status-card {
+    text-align: center;
+    background-color: #1a1b23;
+    font-family: 'Cairo', sans-serif;
+    border-radius: 20px;
+    max-width: 500px;
+    padding: 60px 40px;
+    width: 100%;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+
+}
+
+
+.icon-wrapper {
+    color: white;
+    background-color: #ff9800;
+    width: 70px;
+    height: 70px;
+
+
+    display: flex;
+    justify-content: center;
+    margin: 0 auto 30px;
+    font-size: 30px;
+    border-radius: 50%;
+
+}
+
+.main-title {
+    margin-bottom: 15px;
+    color: #ffffff;
+    font-size: 42px;
+    font-weight: bold;
+
+
+}
+
+
+.sub-title {
+
+    line-height: 1.6;
+    color: #a0a0a0;
+    font-size: 18px;
+}
